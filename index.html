@@ -17,17 +17,11 @@
     content="Peças artesanais em crochê feitas com carinho. Sousplats, trilhos de mesa, jogos de banheiro, tapetes e encomendas personalizadas."
   >
 
-
-  <!-- ÍCONE DO SITE -->
-
   <link
     rel="icon"
     type="image/png"
     href="favicon.png"
   >
-
-
-  <!-- COMPARTILHAMENTO WHATSAPP / FACEBOOK -->
 
   <meta
     property="og:title"
@@ -59,9 +53,6 @@
     content="Ateliê Bellas Artes"
   >
 
-
-  <!-- OUTRAS REDES -->
-
   <meta
     name="twitter:card"
     content="summary_large_image"
@@ -82,16 +73,11 @@
     content="https://atelie-bellas-artes.vercel.app/compartilhamento.png"
   >
 
-
-  <!-- CSS PRINCIPAL -->
-
   <link
     rel="stylesheet"
-    href="style.css?v=4"
+    href="style.css?v=5"
   >
 
-
-  <!-- ESTILOS DA ÁREA DE ENCOMENDAS -->
 
   <style>
 
@@ -180,9 +166,6 @@
       line-height: 1.7;
     }
 
-
-    /* PRAZO E ENTREGA */
-
     .prazo-entrega {
       max-width: 980px;
       margin: 35px auto 0;
@@ -238,7 +221,62 @@
     }
 
 
-    /* TABLET */
+    /* FAQ */
+
+    .faq-lista {
+      max-width: 900px;
+      margin: 35px auto 0;
+      display: grid;
+      gap: 14px;
+    }
+
+    .faq-item {
+      background: #ffffff;
+      border: 1px solid #eadfd7;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(84, 64, 52, 0.06);
+    }
+
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 20px 24px;
+      font-family: Georgia, serif;
+      font-size: 19px;
+      font-weight: bold;
+      color: #624c3e;
+      position: relative;
+      padding-right: 55px;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      position: absolute;
+      right: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: Arial, sans-serif;
+      font-size: 26px;
+      color: #8b6752;
+      font-weight: normal;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+    }
+
+    .faq-resposta {
+      padding: 0 24px 22px;
+      color: #6e5a4c;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
 
     @media (max-width: 950px) {
 
@@ -251,9 +289,6 @@
       }
 
     }
-
-
-    /* CELULAR */
 
     @media (max-width: 650px) {
 
@@ -277,6 +312,15 @@
         padding: 20px 18px;
       }
 
+      .faq-item summary {
+        font-size: 17px;
+        padding: 18px 50px 18px 18px;
+      }
+
+      .faq-resposta {
+        padding: 0 18px 20px;
+      }
+
     }
 
   </style>
@@ -286,8 +330,6 @@
 
 <body>
 
-
-  <!-- CABEÇALHO -->
 
   <header class="topo">
 
@@ -318,6 +360,10 @@
         Encomendas
       </a>
 
+      <a href="#faq">
+        Dúvidas
+      </a>
+
       <a href="#sobre">
         Sobre
       </a>
@@ -334,8 +380,6 @@
 
   <main>
 
-
-    <!-- BANNER PRINCIPAL -->
 
     <section
       id="inicio"
@@ -358,8 +402,6 @@
     </section>
 
 
-
-    <!-- PRODUTOS EM DESTAQUE -->
 
     <section
       id="produtos"
@@ -386,8 +428,6 @@
 
       <div class="produtos-grid">
 
-
-        <!-- SOUSPLATS -->
 
         <article class="produto">
 
@@ -434,8 +474,6 @@
 
 
 
-        <!-- TRILHO -->
-
         <article class="produto">
 
           <div class="produto-imagem">
@@ -481,8 +519,6 @@
         </article>
 
 
-
-        <!-- JOGO DE BANHEIRO -->
 
         <article class="produto">
 
@@ -551,8 +587,6 @@
 
 
 
-    <!-- PEÇA PERSONALIZADA -->
-
     <section class="sobre">
 
       <div class="sobre-conteudo">
@@ -592,8 +626,6 @@
 
 
 
-    <!-- COMO FUNCIONA A ENCOMENDA -->
-
     <section
       id="como-funciona"
       class="secao"
@@ -617,11 +649,8 @@
       </div>
 
 
-
       <div class="etapas-encomenda">
 
-
-        <!-- ETAPA 1 -->
 
         <article class="etapa-encomenda">
 
@@ -641,9 +670,6 @@
         </article>
 
 
-
-        <!-- ETAPA 2 -->
-
         <article class="etapa-encomenda">
 
           <div class="numero-etapa">
@@ -662,9 +688,6 @@
 
         </article>
 
-
-
-        <!-- ETAPA 3 -->
 
         <article class="etapa-encomenda">
 
@@ -689,9 +712,6 @@
         </article>
 
 
-
-        <!-- ETAPA 4 -->
-
         <article class="etapa-encomenda">
 
           <div class="numero-etapa">
@@ -712,9 +732,6 @@
 
       </div>
 
-
-
-      <!-- FORMAS DE PAGAMENTO -->
 
       <div class="pagamento-encomenda">
 
@@ -743,9 +760,6 @@
       </div>
 
 
-
-      <!-- PRAZO E ENTREGA -->
-
       <div class="prazo-entrega">
 
 
@@ -773,7 +787,6 @@
         </article>
 
 
-
         <article class="info-prazo">
 
           <h3>
@@ -797,9 +810,6 @@
       </div>
 
 
-
-      <!-- DATA ESPECIAL -->
-
       <div class="data-especial">
 
         <strong>
@@ -814,9 +824,6 @@
 
       </div>
 
-
-
-      <!-- BOTÃO -->
 
       <div
         style="
@@ -840,7 +847,132 @@
 
 
 
-    <!-- SOBRE -->
+    <!-- PERGUNTAS FREQUENTES -->
+
+    <section
+      id="faq"
+      class="secao"
+    >
+
+      <div class="titulo-secao">
+
+        <span>
+          Tire suas dúvidas
+        </span>
+
+        <h2>
+          Perguntas frequentes
+        </h2>
+
+        <p>
+          Reunimos aqui algumas das dúvidas mais comuns
+          sobre nossas peças e encomendas.
+        </p>
+
+      </div>
+
+
+      <div class="faq-lista">
+
+
+        <details class="faq-item">
+
+          <summary>
+            Posso escolher as cores da minha peça?
+          </summary>
+
+          <div class="faq-resposta">
+            Sim. Em encomendas personalizadas, você pode escolher
+            as cores de acordo com seu gosto e com a decoração
+            do ambiente. A disponibilidade das cores é confirmada
+            pelo WhatsApp antes do início da produção.
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Vocês fazem peças sob medida?
+          </summary>
+
+          <div class="faq-resposta">
+            Sim. Podemos ajustar medidas de acordo com a peça
+            desejada. Basta informar as medidas pelo WhatsApp
+            para avaliarmos o modelo e passarmos o valor da encomenda.
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Como funciona o pagamento?
+          </summary>
+
+          <div class="faq-resposta">
+            Para confirmar a encomenda, solicitamos 50% do valor
+            antecipadamente. Os 50% restantes são pagos quando
+            a peça estiver pronta, antes da entrega ou retirada.
+            Atualmente aceitamos Pix e dinheiro.
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Qual é o prazo de produção?
+          </summary>
+
+          <div class="faq-resposta">
+            O prazo varia conforme o modelo, tamanho e quantidade
+            de peças da encomenda. Antes de confirmar o pedido,
+            informamos pelo WhatsApp o prazo previsto de produção.
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Como funciona a entrega ou retirada?
+          </summary>
+
+          <div class="faq-resposta">
+            Quando a peça estiver pronta, entramos em contato
+            para combinar a melhor forma de entrega ou retirada.
+            Todos os detalhes são acertados diretamente pelo WhatsApp.
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Posso encomendar para uma data especial?
+          </summary>
+
+          <div class="faq-resposta">
+            Sim. Se precisar da peça para aniversário, presente,
+            casamento ou outra data específica, entre em contato
+            antecipadamente para verificarmos nossa disponibilidade
+            de produção.
+          </div>
+
+        </details>
+
+
+      </div>
+
+    </section>
+
+
 
     <section
       id="sobre"
@@ -878,8 +1010,6 @@
 
 
 
-    <!-- CONTATO -->
-
     <section
       id="contato"
       class="contato"
@@ -909,8 +1039,6 @@
   </main>
 
 
-
-  <!-- RODAPÉ -->
 
   <footer>
 
