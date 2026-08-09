@@ -1,0 +1,946 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #4d4139;
+  background: #fffdf9;
+  line-height: 1.6;
+}
+
+.topo {
+  background: #fffdf9;
+  padding: 22px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee5dc;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo h1 {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  color: #6d5546;
+}
+
+.logo p {
+  font-size: 12px;
+  color: #9b8474;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #5c4b40;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #b48a6d;
+}
+
+.banner {
+  min-height: 600px;
+  padding: 100px 8%;
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(245, 235, 224, 0.96),
+      rgba(255, 253, 249, 0.82)
+    );
+}
+
+.banner-conteudo {
+  max-width: 650px;
+}
+
+.detalhe {
+  color: #a57b5f;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.banner h2 {
+  font-family: Georgia, serif;
+  font-size: 56px;
+  line-height: 1.1;
+  color: #624c3e;
+  margin-bottom: 22px;
+}
+
+.banner p {
+  font-size: 18px;
+  max-width: 570px;
+  margin-bottom: 32px;
+}
+
+.botao {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #8b6752;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.botao:hover {
+  background: #6f5140;
+  transform: translateY(-2px);
+}
+
+.secao {
+  padding: 90px 8%;
+}
+
+.titulo-secao {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 50px;
+}
+
+.titulo-secao span,
+.sobre span {
+  color: #a57b5f;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.titulo-secao h2,
+.sobre h2 {
+  font-family: Georgia, serif;
+  font-size: 40px;
+  color: #624c3e;
+  margin: 8px 0;
+}
+
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.produto {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(84, 64, 52, 0.08);
+  transition: 0.3s;
+}
+
+.produto:hover {
+  transform: translateY(-6px);
+}
+
+.produto-imagem {
+  height: 280px;
+  background: #eee4da;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #9a8170;
+}
+
+.produto-info {
+  padding: 25px;
+}
+
+.categoria {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #aa8064;
+}
+
+.produto h3 {
+  font-family: Georgia, serif;
+  font-size: 25px;
+  margin: 6px 0 10px;
+}
+
+.produto-info strong {
+  display: block;
+  font-size: 20px;
+  margin: 18px 0;
+  color: #6c4d3c;
+}
+
+.botao-whatsapp {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  border-radius: 25px;
+  background: #6f8a68;
+  color: white;
+  font-weight: bold;
+}
+
+.sobre {
+  background: #f4ece4;
+  padding: 100px 8%;
+}
+
+.sobre-conteudo {
+  max-width: 750px;
+  margin: auto;
+  text-align: center;
+}
+
+.sobre p {
+  margin-top: 18px;
+  font-size: 17px;
+}
+
+.contato {
+  padding: 100px 8%;
+  text-align: center;
+}
+
+.contato h2 {
+  font-family: Georgia, serif;
+  font-size: 38px;
+  color: #624c3e;
+}
+
+.contato p {
+  margin: 10px 0 25px;
+}
+
+footer {
+  background: #4c3b31;
+  color: #e9ddd3;
+  text-align: center;
+  padding: 35px 20px;
+  font-size: 14px;
+}
+
+@media (max-width: 850px) {
+
+  .topo {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  nav {
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .banner {
+    min-height: 500px;
+    padding-top: 70px;
+  }
+
+  .banner h2 {
+    font-size: 40px;
+  }
+
+  .produtos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .produto {
+    max-width: 450px;
+    margin: auto;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .banner h2 {
+    font-size: 34px;
+  }
+
+  .banner p {
+    font-size: 16px;
+  }
+
+  .titulo-secao h2,
+  .sobre h2 {
+    font-size: 32px;
+  }
+
+}
+.banner-principal {
+  width: 100%;
+  background: #f5eee6;
+  overflow: hidden;
+}
+
+.banner-principal img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* ==================================
+   IMAGENS DOS PRODUTOS
+================================== */
+
+.produto-imagem {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background: #f3ebe3;
+}
+
+.produto-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.produto:hover .produto-imagem img {
+  transform: scale(1.04);
+}
+
+
+/* ==================================
+   AJUSTES PARA CELULAR
+================================== */
+
+@media (max-width: 850px) {
+
+  .produto-imagem {
+    height: 350px;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .produto-imagem {
+    height: 280px;
+  }
+
+}
+.banner-principal {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner-principal img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Área clicável sobre o botão desenhado na imagem */
+.botao-banner-encomenda {
+  position: absolute;
+
+  /* posição aproximada do botão no banner */
+  right: 2.5%;
+  bottom: 2.5%;
+
+  width: 15.5%;
+  height: 7%;
+
+  z-index: 10;
+  cursor: pointer;
+
+  /* invisível porque o botão já está desenhado na imagem */
+  background: transparent;
+}
+
+/* Facilita o toque no celular */
+@media (max-width: 700px) {
+  .botao-banner-encomenda {
+    right: 2%;
+    bottom: 2%;
+    width: 17%;
+    height: 8%;
+  }
+}
+/* ==================================
+   BOTÃO CLICÁVEL DO BANNER
+================================== */
+
+.banner-principal {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner-principal img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/*
+  Área invisível colocada sobre
+  "FAZER ENCOMENDA" da imagem
+*/
+
+.botao-banner-encomenda {
+  position: absolute;
+
+  right: 2%;
+  bottom: 2%;
+
+  width: 16%;
+  height: 8%;
+
+  z-index: 20;
+
+  display: block;
+
+  cursor: pointer;
+
+  background: transparent;
+}
+
+
+/* ==================================
+   CELULAR
+================================== */
+
+@media (max-width: 700px) {
+
+  .botao-banner-encomenda {
+    right: 1.5%;
+    bottom: 2%;
+    width: 18%;
+    height: 9%;
+  }
+
+}
+/* =====================================
+   PÁGINA DO CATÁLOGO
+===================================== */
+
+.catalogo-topo {
+  text-align: center;
+  padding: 80px 20px 45px;
+  background: #f5eee6;
+}
+
+.catalogo-topo span {
+  color: #a57b5f;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.catalogo-topo h2 {
+  font-family: Georgia, serif;
+  font-size: 46px;
+  color: #624c3e;
+  margin: 10px 0;
+}
+
+.catalogo-topo p {
+  max-width: 600px;
+  margin: auto;
+  color: #6e5a4c;
+}
+
+.catalogo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.produto-sem-foto {
+  background: #eee4da;
+  color: #987d6c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+
+/* TABLET */
+
+@media (max-width: 950px) {
+
+  .catalogo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* CELULAR */
+
+@media (max-width: 650px) {
+
+  .catalogo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .catalogo-topo h2 {
+    font-size: 34px;
+  }
+
+}
+/* =====================================
+   FILTROS DO CATÁLOGO
+===================================== */
+
+.filtros-catalogo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  padding: 35px 20px 10px;
+
+  background: #fffdf9;
+}
+
+.filtro-btn {
+  border: 1px solid #d8c4b5;
+
+  background: #ffffff;
+
+  color: #6d5546;
+
+  padding: 11px 20px;
+
+  border-radius: 30px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.filtro-btn:hover {
+  background: #eee3da;
+}
+
+.filtro-btn.ativo {
+  background: #8b6752;
+
+  border-color: #8b6752;
+
+  color: white;
+}
+
+.item-catalogo.oculto {
+  display: none;
+}
+/* ==================================================
+   ATELIÊ BELLAS ARTES
+   AJUSTES PARA CELULAR E TABLET
+================================================== */
+
+
+/* Evita elementos ultrapassarem a tela */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+/* ==================================================
+   TABLETS E TELAS MENORES
+================================================== */
+
+@media (max-width: 900px) {
+
+  /* CABEÇALHO */
+
+  .topo {
+    padding: 20px;
+  }
+
+  .logo {
+    text-align: center;
+  }
+
+  .logo h1 {
+    font-size: 30px;
+  }
+
+
+  /* MENU */
+
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    margin-top: 15px;
+  }
+
+  nav a {
+    margin: 0;
+  }
+
+
+  /* PRODUTOS */
+
+  .produtos-grid,
+  .catalogo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+
+
+  /* BANNER */
+
+  .banner-principal img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+}
+
+
+
+/* ==================================================
+   CELULARES
+================================================== */
+
+@media (max-width: 650px) {
+
+
+  /* --------------------------------
+     CABEÇALHO
+  -------------------------------- */
+
+  .topo {
+    padding: 18px 15px;
+  }
+
+  .logo h1 {
+    font-size: 27px;
+    line-height: 1.2;
+  }
+
+  .logo p {
+    font-size: 13px;
+    margin-top: 5px;
+  }
+
+
+  /* --------------------------------
+     MENU
+  -------------------------------- */
+
+  nav {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 18px;
+  }
+
+  nav a {
+    padding: 9px 11px;
+
+    font-size: 13px;
+
+    border-radius: 20px;
+  }
+
+
+  /* --------------------------------
+     BANNER DA PÁGINA INICIAL
+  -------------------------------- */
+
+  .banner-principal {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .banner-principal img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+  }
+
+
+  /* --------------------------------
+     SEÇÕES
+  -------------------------------- */
+
+  .secao {
+    padding: 50px 18px;
+  }
+
+  .titulo-secao {
+    margin-bottom: 30px;
+  }
+
+  .titulo-secao h2 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .titulo-secao p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+
+  /* --------------------------------
+     CATÁLOGO
+  -------------------------------- */
+
+  .catalogo-topo {
+    padding: 50px 18px 30px;
+  }
+
+  .catalogo-topo h2 {
+    font-size: 31px;
+    line-height: 1.2;
+  }
+
+  .catalogo-topo p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+
+  /* --------------------------------
+     FILTROS
+  -------------------------------- */
+
+  .filtros-catalogo {
+    padding: 25px 12px 5px;
+
+    gap: 8px;
+  }
+
+  .filtro-btn {
+    padding: 10px 14px;
+
+    font-size: 13px;
+  }
+
+
+  /* --------------------------------
+     PRODUTOS
+  -------------------------------- */
+
+  .produtos-grid,
+  .catalogo-grid {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .produto {
+    width: 100%;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+  }
+
+  .produto-imagem {
+    width: 100%;
+  }
+
+  .produto-imagem img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    object-fit: cover;
+  }
+
+  .produto-info {
+    padding: 22px 18px;
+  }
+
+  .produto-info h3 {
+    font-size: 22px;
+  }
+
+  .produto-info p {
+    font-size: 15px;
+
+    line-height: 1.6;
+  }
+
+  .produto-info strong {
+    display: block;
+
+    font-size: 21px;
+
+    margin: 15px 0;
+  }
+
+
+  /* --------------------------------
+     BOTÕES
+  -------------------------------- */
+
+  .botao,
+  .botao-whatsapp {
+    display: block;
+
+    width: 100%;
+
+    max-width: 420px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 15px 18px;
+
+    text-align: center;
+
+    font-size: 15px;
+
+    border-radius: 8px;
+  }
+
+
+  /* --------------------------------
+     ÁREA SOBRE / PERSONALIZADO
+  -------------------------------- */
+
+  .sobre {
+    padding: 50px 18px;
+  }
+
+  .sobre-conteudo {
+    width: 100%;
+    max-width: 600px;
+
+    margin: auto;
+  }
+
+  .sobre-conteudo h2 {
+    font-size: 29px;
+
+    line-height: 1.25;
+  }
+
+  .sobre-conteudo p {
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+
+  /* --------------------------------
+     CONTATO
+  -------------------------------- */
+
+  .contato {
+    padding: 50px 18px;
+  }
+
+  .contato h2 {
+    font-size: 29px;
+
+    line-height: 1.25;
+  }
+
+  .contato p {
+    font-size: 15px;
+
+    line-height: 1.6;
+  }
+
+
+  /* --------------------------------
+     RODAPÉ
+  -------------------------------- */
+
+  footer {
+    padding: 30px 18px;
+
+    text-align: center;
+  }
+
+  footer p {
+    font-size: 13px;
+  }
+
+}
+
+
+
+/* ==================================================
+   CELULARES MUITO PEQUENOS
+================================================== */
+
+@media (max-width: 380px) {
+
+  .logo h1 {
+    font-size: 24px;
+  }
+
+  nav a {
+    font-size: 12px;
+
+    padding: 8px 9px;
+  }
+
+  .catalogo-topo h2,
+  .titulo-secao h2 {
+    font-size: 27px;
+  }
+
+  .filtro-btn {
+    font-size: 12px;
+
+    padding: 9px 11px;
+  }
+
+  .produto-info h3 {
+    font-size: 20px;
+  }
+
+}
