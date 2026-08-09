@@ -87,14 +87,11 @@
 
   <link
     rel="stylesheet"
-    href="style.css?v=3"
+    href="style.css?v=4"
   >
 
 
-  <!--
-    ESTILO EMBUTIDO DA SEÇÃO DE ENCOMENDAS
-    Assim essa parte não depende do style.css
-  -->
+  <!-- ESTILOS DA ÁREA DE ENCOMENDAS -->
 
   <style>
 
@@ -183,13 +180,80 @@
       line-height: 1.7;
     }
 
+
+    /* PRAZO E ENTREGA */
+
+    .prazo-entrega {
+      max-width: 980px;
+      margin: 35px auto 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .info-prazo {
+      background: #ffffff;
+      border: 1px solid #eee3da;
+      border-radius: 18px;
+      padding: 28px 24px;
+      box-shadow: 0 10px 30px rgba(84, 64, 52, 0.07);
+      text-align: center;
+    }
+
+    .info-prazo h3 {
+      font-family: Georgia, serif;
+      color: #624c3e;
+      font-size: 23px;
+      margin-bottom: 14px;
+    }
+
+    .info-prazo p {
+      color: #6e5a4c;
+      font-size: 15px;
+      line-height: 1.7;
+      margin-top: 8px;
+    }
+
+    .data-especial {
+      max-width: 760px;
+      margin: 25px auto 0;
+      padding: 22px 25px;
+      background: #fff8f3;
+      border: 1px solid #ead9cc;
+      border-radius: 18px;
+      text-align: center;
+    }
+
+    .data-especial strong {
+      display: block;
+      font-family: Georgia, serif;
+      color: #624c3e;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .data-especial p {
+      color: #6e5a4c;
+      line-height: 1.6;
+    }
+
+
+    /* TABLET */
+
     @media (max-width: 950px) {
 
       .etapas-encomenda {
         grid-template-columns: repeat(2, 1fr);
       }
 
+      .prazo-entrega {
+        grid-template-columns: 1fr;
+      }
+
     }
+
+
+    /* CELULAR */
 
     @media (max-width: 650px) {
 
@@ -203,6 +267,14 @@
 
       .pagamento-encomenda {
         padding: 25px 18px;
+      }
+
+      .info-prazo {
+        padding: 25px 18px;
+      }
+
+      .data-especial {
+        padding: 20px 18px;
       }
 
     }
@@ -275,7 +347,6 @@
         alt="Ateliê Bellas Artes - peças artesanais em crochê"
       >
 
-
       <a
         href="https://wa.me/5548991967784?text=Olá! Vim pelo site do Ateliê Bellas Artes e gostaria de fazer uma encomenda."
         target="_blank"
@@ -329,7 +400,6 @@
 
           </div>
 
-
           <div class="produto-info">
 
             <span class="categoria">
@@ -376,7 +446,6 @@
             >
 
           </div>
-
 
           <div class="produto-info">
 
@@ -426,7 +495,6 @@
 
           </div>
 
-
           <div class="produto-info">
 
             <span class="categoria">
@@ -460,9 +528,7 @@
 
         </article>
 
-
       </div>
-
 
 
       <div
@@ -551,6 +617,7 @@
       </div>
 
 
+
       <div class="etapas-encomenda">
 
 
@@ -610,12 +677,12 @@
           </h3>
 
           <p>
-            Para iniciarmos a produção,
+            Para confirmar o pedido,
             solicitamos 50% do valor antecipadamente.
           </p>
 
           <p>
-            Os outros 50% são pagos quando a peça
+            Os 50% restantes são pagos quando a peça
             estiver pronta, antes da entrega ou retirada.
           </p>
 
@@ -643,7 +710,6 @@
 
         </article>
 
-
       </div>
 
 
@@ -655,7 +721,6 @@
         <h3>
           Formas de pagamento
         </h3>
-
 
         <div class="formas-pagamento">
 
@@ -669,7 +734,6 @@
 
         </div>
 
-
         <p>
           O pagamento antecipado de 50% garante
           a confirmação da encomenda e o início
@@ -679,6 +743,80 @@
       </div>
 
 
+
+      <!-- PRAZO E ENTREGA -->
+
+      <div class="prazo-entrega">
+
+
+        <article class="info-prazo">
+
+          <h3>
+            Prazo de produção
+          </h3>
+
+          <p>
+            Cada peça é produzida artesanalmente
+            após a confirmação do pedido.
+          </p>
+
+          <p>
+            O prazo pode variar de acordo com o
+            modelo, tamanho e quantidade da encomenda.
+          </p>
+
+          <p>
+            O prazo exato será informado pelo WhatsApp
+            antes da confirmação do pedido.
+          </p>
+
+        </article>
+
+
+
+        <article class="info-prazo">
+
+          <h3>
+            Entrega ou retirada
+          </h3>
+
+          <p>
+            Quando sua encomenda estiver pronta,
+            entraremos em contato para combinar
+            a entrega ou retirada.
+          </p>
+
+          <p>
+            Os 50% restantes deverão estar pagos
+            antes da entrega ou retirada da peça.
+          </p>
+
+        </article>
+
+
+      </div>
+
+
+
+      <!-- DATA ESPECIAL -->
+
+      <div class="data-especial">
+
+        <strong>
+          Precisa para uma data especial?
+        </strong>
+
+        <p>
+          Encomendas com data específica devem ser
+          consultadas antecipadamente para verificarmos
+          a disponibilidade de produção.
+        </p>
+
+      </div>
+
+
+
+      <!-- BOTÃO -->
 
       <div
         style="
