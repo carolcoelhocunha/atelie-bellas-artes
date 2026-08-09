@@ -944,3 +944,173 @@ img {
   }
 
 }
+/* =========================================
+   COMO FUNCIONA SUA ENCOMENDA
+========================================= */
+
+.etapas-encomenda {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 22px;
+
+  margin-top: 35px;
+}
+
+
+.etapa-encomenda {
+  background: #ffffff;
+
+  padding: 28px 22px;
+
+  border-radius: 18px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(84, 64, 52, 0.08);
+
+  border: 1px solid #eee3da;
+}
+
+
+.numero-etapa {
+  width: 48px;
+  height: 48px;
+
+  margin: 0 auto 18px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #8b6752;
+
+  color: #ffffff;
+
+  font-size: 20px;
+
+  font-weight: bold;
+}
+
+
+.etapa-encomenda h3 {
+  font-family: Georgia, serif;
+
+  color: #624c3e;
+
+  font-size: 21px;
+
+  margin-bottom: 12px;
+}
+
+
+.etapa-encomenda p {
+  color: #6e5a4c;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  margin-top: 8px;
+}
+
+
+/* PAGAMENTO */
+
+.pagamento-encomenda {
+  max-width: 750px;
+
+  margin: 45px auto 0;
+
+  padding: 30px;
+
+  text-align: center;
+
+  background: #f4ece4;
+
+  border-radius: 20px;
+}
+
+
+.pagamento-encomenda h3 {
+  font-family: Georgia, serif;
+
+  color: #624c3e;
+
+  font-size: 26px;
+
+  margin-bottom: 18px;
+}
+
+
+.formas-pagamento {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 20px;
+}
+
+
+.formas-pagamento span {
+  background: #ffffff;
+
+  color: #6c4d3c;
+
+  padding: 10px 24px;
+
+  border-radius: 30px;
+
+  font-weight: bold;
+
+  border: 1px solid #ddcabe;
+}
+
+
+.pagamento-encomenda p {
+  max-width: 580px;
+
+  margin: auto;
+
+  color: #6e5a4c;
+
+  line-height: 1.7;
+}
+
+
+/* TABLET */
+
+@media (max-width: 950px) {
+
+  .etapas-encomenda {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* CELULAR */
+
+@media (max-width: 650px) {
+
+  .etapas-encomenda {
+    grid-template-columns: 1fr;
+  }
+
+  .etapa-encomenda {
+    padding: 25px 20px;
+  }
+
+  .pagamento-encomenda {
+    padding: 25px 18px;
+  }
+
+}
