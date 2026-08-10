@@ -18,6 +18,7 @@
 
   <link rel="icon" type="image/png" href="favicon.png">
 
+  <!-- COMPARTILHAMENTO -->
   <meta property="og:title" content="Ateliê Bellas Artes | Crochê Artesanal">
 
   <meta
@@ -36,13 +37,9 @@
   >
 
   <meta property="og:type" content="website">
-
   <meta property="og:site_name" content="Ateliê Bellas Artes">
 
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  >
+  <meta name="twitter:card" content="summary_large_image">
 
   <meta
     name="twitter:title"
@@ -59,7 +56,7 @@
     content="https://atelie-bellas-artes.vercel.app/compartilhamento.png"
   >
 
-  <link rel="stylesheet" href="style.css?v=7">
+  <link rel="stylesheet" href="style.css?v=8">
 
 
   <style>
@@ -80,43 +77,20 @@
       cursor: pointer;
     }
 
-    @media (max-width: 650px) {
 
-      .topo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
+    /* =========================
+       BANNER RESPONSIVO
+    ========================= */
 
-      .botao-menu-mobile {
-        display: block;
-        margin-top: 14px;
-      }
+    .banner-responsivo {
+      display: block;
+      width: 100%;
+    }
 
-      .topo nav {
-        display: none;
-        width: 100%;
-        margin-top: 14px;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .topo nav.menu-aberto {
-        display: flex;
-      }
-
-      .topo nav a {
-        display: block;
-        width: 100%;
-        max-width: 280px;
-        text-align: center;
-        padding: 11px 14px;
-        border-radius: 10px;
-        background: #fffaf6;
-        border: 1px solid #eee3da;
-      }
-
+    .banner-responsivo img {
+      display: block;
+      width: 100%;
+      height: auto;
     }
 
 
@@ -355,6 +329,51 @@
 
     @media (max-width: 650px) {
 
+      .topo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .botao-menu-mobile {
+        display: block;
+        margin-top: 14px;
+      }
+
+      .topo nav {
+        display: none;
+        width: 100%;
+        margin-top: 14px;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .topo nav.menu-aberto {
+        display: flex;
+      }
+
+      .topo nav a {
+        display: block;
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+        padding: 11px 14px;
+        border-radius: 10px;
+        background: #fffaf6;
+        border: 1px solid #eee3da;
+      }
+
+      .banner-principal {
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .banner-responsivo,
+      .banner-responsivo img {
+        width: 100%;
+      }
+
       .etapas-encomenda {
         grid-template-columns: 1fr;
       }
@@ -440,14 +459,28 @@
   <main>
 
 
-    <!-- BANNER -->
+    <!-- =====================================
+         BANNER RESPONSIVO
+         PC = banner-bellas-artes.png
+         CELULAR = banner-bellas-artes-mobile.png
+    ====================================== -->
 
     <section id="inicio" class="banner-principal">
 
-      <img
-        src="banner-bellas-artes.png"
-        alt="Ateliê Bellas Artes - peças artesanais em crochê"
-      >
+      <picture class="banner-responsivo">
+
+        <source
+          media="(max-width: 650px)"
+          srcset="banner-bellas-artes-mobile.png"
+        >
+
+        <img
+          src="banner-bellas-artes.png"
+          alt="Ateliê Bellas Artes - peças artesanais em crochê"
+        >
+
+      </picture>
+
 
       <a
         href="https://wa.me/5548991967784?text=Olá! Vim pelo site do Ateliê Bellas Artes e gostaria de fazer uma encomenda."
@@ -481,6 +514,8 @@
 
       <div class="produtos-grid">
 
+
+        <!-- SOUSPLAT -->
 
         <article class="produto">
 
@@ -520,6 +555,8 @@
         </article>
 
 
+
+        <!-- TRILHO -->
 
         <article class="produto">
 
@@ -561,6 +598,8 @@
 
 
 
+        <!-- JOGO DE BANHEIRO -->
+
         <article class="produto">
 
           <div class="produto-imagem">
@@ -598,7 +637,6 @@
           </div>
 
         </article>
-
 
       </div>
 
@@ -672,6 +710,7 @@
 
       <div class="etapas-encomenda">
 
+
         <article class="etapa-encomenda">
 
           <div class="numero-etapa">1</div>
@@ -738,6 +777,8 @@
 
 
 
+      <!-- PAGAMENTO -->
+
       <div class="pagamento-encomenda">
 
         <h3>Formas de pagamento</h3>
@@ -745,7 +786,6 @@
         <div class="formas-pagamento">
 
           <span>Pix</span>
-
           <span>Dinheiro</span>
 
         </div>
@@ -760,7 +800,10 @@
 
 
 
+      <!-- PRAZO E ENTREGA -->
+
       <div class="prazo-entrega">
+
 
         <article class="info-prazo">
 
@@ -805,6 +848,8 @@
 
 
 
+      <!-- DATA ESPECIAL -->
+
       <div class="data-especial">
 
         <strong>Precisa para uma data especial?</strong>
@@ -835,7 +880,9 @@
 
 
 
-    <!-- FAQ -->
+    <!-- =========================================
+         PERGUNTAS FREQUENTES
+    ========================================== -->
 
     <section id="faq" class="secao">
 
@@ -854,6 +901,7 @@
 
 
       <div class="faq-lista">
+
 
         <details class="faq-item">
 
@@ -947,6 +995,7 @@
 
         </details>
 
+
       </div>
 
     </section>
@@ -1011,6 +1060,8 @@
 
 
 
+  <!-- RODAPÉ -->
+
   <footer>
 
     <p>© 2026 Ateliê Bellas Artes</p>
@@ -1027,8 +1078,12 @@
 
     document.addEventListener("DOMContentLoaded", function () {
 
-      const botaoMenu = document.getElementById("botao-menu-mobile");
-      const menu = document.getElementById("menu-principal");
+      const botaoMenu =
+        document.getElementById("botao-menu-mobile");
+
+      const menu =
+        document.getElementById("menu-principal");
+
 
       if (botaoMenu && menu) {
 
@@ -1036,18 +1091,22 @@
 
           menu.classList.toggle("menu-aberto");
 
-          const aberto = menu.classList.contains("menu-aberto");
+          const aberto =
+            menu.classList.contains("menu-aberto");
 
-          botaoMenu.setAttribute("aria-expanded", aberto);
+          botaoMenu.setAttribute(
+            "aria-expanded",
+            aberto
+          );
 
-          botaoMenu.textContent = aberto
-            ? "✕ Fechar"
-            : "☰ Menu";
+          botaoMenu.textContent =
+            aberto ? "✕ Fechar" : "☰ Menu";
 
         });
 
 
         const links = menu.querySelectorAll("a");
+
 
         links.forEach(function (link) {
 
