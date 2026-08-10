@@ -2,7 +2,6 @@
 <html lang="pt-BR">
 
 <head>
-
   <meta charset="UTF-8">
 
   <meta
@@ -17,22 +16,10 @@
     content="Conheça o catálogo do Ateliê Bellas Artes: sousplats, trilhos de mesa, jogos de banheiro, tapetes e peças personalizadas em crochê."
   >
 
+  <link rel="icon" type="image/png" href="favicon.png">
 
-  <!-- ÍCONE DO SITE -->
-
-  <link
-    rel="icon"
-    type="image/png"
-    href="favicon.png"
-  >
-
-
-  <!-- COMPARTILHAMENTO WHATSAPP / FACEBOOK -->
-
-  <meta
-    property="og:title"
-    content="Catálogo | Ateliê Bellas Artes"
-  >
+  <!-- COMPARTILHAMENTO -->
+  <meta property="og:title" content="Catálogo | Ateliê Bellas Artes">
 
   <meta
     property="og:description"
@@ -49,23 +36,10 @@
     content="https://atelie-bellas-artes.vercel.app/catalogo.html"
   >
 
-  <meta
-    property="og:type"
-    content="website"
-  >
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ateliê Bellas Artes">
 
-  <meta
-    property="og:site_name"
-    content="Ateliê Bellas Artes"
-  >
-
-
-  <!-- OUTRAS REDES SOCIAIS -->
-
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  >
+  <meta name="twitter:card" content="summary_large_image">
 
   <meta
     name="twitter:title"
@@ -82,13 +56,260 @@
     content="https://atelie-bellas-artes.vercel.app/compartilhamento.png"
   >
 
+  <link rel="stylesheet" href="style.css?v=11">
 
-  <!-- CSS -->
 
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
+  <style>
+
+    /* =========================
+       MENU MOBILE
+    ========================= */
+
+    .botao-menu-mobile {
+      display: none;
+      background: transparent;
+      border: 1px solid #d8c4b5;
+      color: #624c3e;
+      padding: 10px 16px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+
+    /* =========================
+       CATÁLOGO
+    ========================= */
+
+    .catalogo-topo {
+      text-align: center;
+      padding: 55px 20px 25px;
+    }
+
+    .catalogo-topo span {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      color: #9b765f;
+      font-weight: bold;
+    }
+
+    .catalogo-topo h2 {
+      font-family: Georgia, serif;
+      color: #624c3e;
+      font-size: 38px;
+      margin-top: 8px;
+      margin-bottom: 12px;
+    }
+
+    .catalogo-topo p {
+      max-width: 650px;
+      margin: auto;
+      color: #6e5a4c;
+      line-height: 1.6;
+    }
+
+
+    /* =========================
+       FILTROS
+    ========================= */
+
+    .filtros-catalogo {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 20px 15px 5px;
+    }
+
+    .filtro-btn {
+      border: 1px solid #d8c4b5;
+      background: #ffffff;
+      color: #6d5546;
+      padding: 10px 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: bold;
+      transition: 0.25s;
+    }
+
+    .filtro-btn:hover {
+      background: #eee3da;
+    }
+
+    .filtro-btn.ativo {
+      background: #8b6752;
+      border-color: #8b6752;
+      color: #ffffff;
+    }
+
+    .item-catalogo.oculto {
+      display: none;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 650px) {
+
+      /* CABEÇALHO */
+
+      .topo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 14px;
+        padding-bottom: 14px;
+      }
+
+      .logo {
+        text-align: center;
+      }
+
+      .logo h1 {
+        font-size: 24px;
+        line-height: 1.05;
+        margin-bottom: 4px;
+      }
+
+      .logo p {
+        font-size: 12px;
+        margin-top: 2px;
+      }
+
+
+      /* MENU */
+
+      .botao-menu-mobile {
+        display: block;
+        margin-top: 10px;
+        padding: 9px 15px;
+        font-size: 13px;
+      }
+
+      .topo nav {
+        display: none;
+        width: 100%;
+        margin-top: 12px;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .topo nav.menu-aberto {
+        display: flex;
+      }
+
+      .topo nav a {
+        display: block;
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+        padding: 11px 14px;
+        border-radius: 10px;
+        background: #fffaf6;
+        border: 1px solid #eee3da;
+      }
+
+
+      /* TOPO DO CATÁLOGO */
+
+      .catalogo-topo {
+        padding: 38px 18px 20px;
+      }
+
+      .catalogo-topo h2 {
+        font-size: 29px;
+        line-height: 1.2;
+      }
+
+      .catalogo-topo p {
+        font-size: 14px;
+      }
+
+
+      /* FILTROS */
+
+      .filtros-catalogo {
+        gap: 7px;
+        padding: 18px 10px 5px;
+      }
+
+      .filtro-btn {
+        padding: 9px 12px;
+        font-size: 12px;
+      }
+
+
+      /* CARDS */
+
+      .catalogo-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .produto {
+        width: 100%;
+        border-radius: 16px;
+        overflow: hidden;
+      }
+
+      .produto-imagem {
+        width: 100%;
+        height: 220px;
+        overflow: hidden;
+      }
+
+      .produto-imagem img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .produto-info {
+        padding: 20px 16px;
+      }
+
+      .produto-info .categoria {
+        font-size: 11px;
+      }
+
+      .produto-info h3 {
+        font-size: 21px;
+        line-height: 1.2;
+        margin-top: 6px;
+        margin-bottom: 10px;
+      }
+
+      .produto-info p {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .produto-info strong {
+        display: block;
+        font-size: 20px;
+        margin: 14px 0;
+      }
+
+      .botao-whatsapp {
+        display: block;
+        width: 100%;
+        padding: 14px 16px;
+        text-align: center;
+        font-size: 14px;
+        box-sizing: border-box;
+      }
+
+    }
+
+  </style>
 
 </head>
 
@@ -96,38 +317,42 @@
 <body>
 
 
+  <!-- CABEÇALHO -->
+
   <header class="topo">
 
     <div class="logo">
 
-      <h1>
-        Ateliê Bellas Artes
-      </h1>
+      <h1>Ateliê Bellas Artes</h1>
 
-      <p>
-        Peças artesanais feitas com carinho
-      </p>
+      <p>Peças artesanais feitas com carinho</p>
 
     </div>
 
 
-    <nav>
+    <button
+      class="botao-menu-mobile"
+      id="botao-menu-mobile"
+      aria-expanded="false"
+      aria-controls="menu-principal"
+    >
+      ☰ Menu
+    </button>
 
-      <a href="index.html">
-        Início
-      </a>
 
-      <a href="catalogo.html">
-        Produtos
-      </a>
+    <nav id="menu-principal">
 
-      <a href="index.html#sobre">
-        Sobre
-      </a>
+      <a href="index.html">Início</a>
 
-      <a href="index.html#contato">
-        Contato
-      </a>
+      <a href="catalogo.html">Produtos</a>
+
+      <a href="index.html#como-funciona">Encomendas</a>
+
+      <a href="index.html#faq">Dúvidas</a>
+
+      <a href="index.html#sobre">Sobre</a>
+
+      <a href="index.html#contato">Contato</a>
 
     </nav>
 
@@ -142,13 +367,9 @@
 
     <section class="catalogo-topo">
 
-      <span>
-        Nosso catálogo
-      </span>
+      <span>Nosso catálogo</span>
 
-      <h2>
-        Escolha sua peça favorita
-      </h2>
+      <h2>Escolha sua peça favorita</h2>
 
       <p>
         Peças artesanais produzidas com cuidado,
@@ -260,7 +481,7 @@
 
 
 
-        <!-- KIT 4 SOUSPLATS -->
+        <!-- KIT 4 -->
 
         <article
           class="produto item-catalogo"
@@ -311,7 +532,7 @@
 
 
 
-        <!-- KIT 6 SOUSPLATS -->
+        <!-- KIT 6 -->
 
         <article
           class="produto item-catalogo"
@@ -362,7 +583,7 @@
 
 
 
-        <!-- TRILHO 1,20 M -->
+        <!-- TRILHO 1,20 -->
 
         <article
           class="produto item-catalogo"
@@ -413,7 +634,7 @@
 
 
 
-        <!-- TRILHO 1,80 M -->
+        <!-- TRILHO 1,80 -->
 
         <article
           class="produto item-catalogo"
@@ -674,7 +895,7 @@
 
 
 
-    <!-- PEÇA PERSONALIZADA -->
+    <!-- PERSONALIZADO -->
 
     <section class="sobre">
 
@@ -744,18 +965,138 @@
 
   <footer>
 
-    <p>
-      © 2026 Ateliê Bellas Artes
-    </p>
+    <p>© 2026 Ateliê Bellas Artes</p>
 
-    <p>
-      Peças artesanais feitas com carinho.
-    </p>
+    <p>Peças artesanais feitas com carinho.</p>
 
   </footer>
 
 
-  <script src="script.js"></script>
+
+  <!-- MENU MOBILE -->
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const botaoMenu =
+        document.getElementById("botao-menu-mobile");
+
+      const menu =
+        document.getElementById("menu-principal");
+
+
+      if (botaoMenu && menu) {
+
+        botaoMenu.addEventListener("click", function () {
+
+          menu.classList.toggle("menu-aberto");
+
+          const aberto =
+            menu.classList.contains("menu-aberto");
+
+          botaoMenu.setAttribute(
+            "aria-expanded",
+            aberto
+          );
+
+          botaoMenu.textContent =
+            aberto ? "✕ Fechar" : "☰ Menu";
+
+        });
+
+
+        const links = menu.querySelectorAll("a");
+
+
+        links.forEach(function (link) {
+
+          link.addEventListener("click", function () {
+
+            if (window.innerWidth <= 650) {
+
+              menu.classList.remove("menu-aberto");
+
+              botaoMenu.setAttribute(
+                "aria-expanded",
+                "false"
+              );
+
+              botaoMenu.textContent = "☰ Menu";
+
+            }
+
+          });
+
+        });
+
+      }
+
+    });
+
+  </script>
+
+
+
+  <!-- FILTROS DO CATÁLOGO -->
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const botoes =
+        document.querySelectorAll(".filtro-btn");
+
+      const produtos =
+        document.querySelectorAll(".item-catalogo");
+
+
+      botoes.forEach(function (botao) {
+
+        botao.addEventListener("click", function () {
+
+          const filtro =
+            this.getAttribute("data-filtro");
+
+
+          botoes.forEach(function (item) {
+
+            item.classList.remove("ativo");
+
+          });
+
+
+          this.classList.add("ativo");
+
+
+          produtos.forEach(function (produto) {
+
+            const categoria =
+              produto.getAttribute("data-categoria");
+
+
+            if (
+              filtro === "todos" ||
+              categoria === filtro
+            ) {
+
+              produto.classList.remove("oculto");
+
+            } else {
+
+              produto.classList.add("oculto");
+
+            }
+
+          });
+
+        });
+
+      });
+
+    });
+
+  </script>
 
 
 </body>
