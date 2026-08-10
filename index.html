@@ -56,7 +56,7 @@
     content="https://atelie-bellas-artes.vercel.app/compartilhamento.png"
   >
 
-  <link rel="stylesheet" href="style.css?v=8">
+  <link rel="stylesheet" href="style.css?v=9">
 
 
   <style>
@@ -329,21 +329,49 @@
 
     @media (max-width: 650px) {
 
+      /*
+        CABEÇALHO COMPACTO
+      */
+
       .topo {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-top: 14px;
+        padding-bottom: 14px;
       }
+
+      .logo {
+        text-align: center;
+      }
+
+      .logo h1 {
+        font-size: 24px;
+        line-height: 1.05;
+        margin-bottom: 4px;
+      }
+
+      .logo p {
+        font-size: 12px;
+        margin-top: 2px;
+      }
+
+
+      /*
+        BOTÃO MENU
+      */
 
       .botao-menu-mobile {
         display: block;
-        margin-top: 14px;
+        margin-top: 10px;
+        padding: 9px 15px;
+        font-size: 13px;
       }
 
       .topo nav {
         display: none;
         width: 100%;
-        margin-top: 14px;
+        margin-top: 12px;
         flex-direction: column;
         align-items: center;
         gap: 8px;
@@ -364,6 +392,11 @@
         border: 1px solid #eee3da;
       }
 
+
+      /*
+        BANNER MOBILE
+      */
+
       .banner-principal {
         width: 100%;
         overflow: hidden;
@@ -373,6 +406,11 @@
       .banner-responsivo img {
         width: 100%;
       }
+
+
+      /*
+        ENCOMENDAS
+      */
 
       .etapas-encomenda {
         grid-template-columns: 1fr;
@@ -393,6 +431,11 @@
       .data-especial {
         padding: 20px 18px;
       }
+
+
+      /*
+        FAQ
+      */
 
       .faq-item summary {
         font-size: 17px;
@@ -459,21 +502,19 @@
   <main>
 
 
-    <!-- =====================================
-         BANNER RESPONSIVO
-         PC = banner-bellas-artes.png
-         CELULAR = banner-bellas-artes-mobile.png
-    ====================================== -->
+    <!-- BANNER RESPONSIVO -->
 
     <section id="inicio" class="banner-principal">
 
       <picture class="banner-responsivo">
 
+        <!-- CELULAR -->
         <source
           media="(max-width: 650px)"
           srcset="banner-bellas-artes-mobile.png"
         >
 
+        <!-- COMPUTADOR -->
         <img
           src="banner-bellas-artes.png"
           alt="Ateliê Bellas Artes - peças artesanais em crochê"
@@ -528,6 +569,7 @@
 
           </div>
 
+
           <div class="produto-info">
 
             <span class="categoria">Mesa posta</span>
@@ -568,6 +610,7 @@
             >
 
           </div>
+
 
           <div class="produto-info">
 
@@ -611,6 +654,7 @@
 
           </div>
 
+
           <div class="produto-info">
 
             <span class="categoria">Banheiro</span>
@@ -637,6 +681,7 @@
           </div>
 
         </article>
+
 
       </div>
 
@@ -725,6 +770,7 @@
         </article>
 
 
+
         <article class="etapa-encomenda">
 
           <div class="numero-etapa">2</div>
@@ -738,6 +784,7 @@
           </p>
 
         </article>
+
 
 
         <article class="etapa-encomenda">
@@ -759,6 +806,7 @@
         </article>
 
 
+
         <article class="etapa-encomenda">
 
           <div class="numero-etapa">4</div>
@@ -773,6 +821,7 @@
 
         </article>
 
+
       </div>
 
 
@@ -786,6 +835,7 @@
         <div class="formas-pagamento">
 
           <span>Pix</span>
+
           <span>Dinheiro</span>
 
         </div>
@@ -800,7 +850,7 @@
 
 
 
-      <!-- PRAZO E ENTREGA -->
+      <!-- PRAZO -->
 
       <div class="prazo-entrega">
 
@@ -827,6 +877,7 @@
         </article>
 
 
+
         <article class="info-prazo">
 
           <h3>Entrega ou retirada</h3>
@@ -843,6 +894,7 @@
           </p>
 
         </article>
+
 
       </div>
 
@@ -919,6 +971,7 @@
         </details>
 
 
+
         <details class="faq-item">
 
           <summary>
@@ -932,6 +985,7 @@
           </div>
 
         </details>
+
 
 
         <details class="faq-item">
@@ -950,6 +1004,7 @@
         </details>
 
 
+
         <details class="faq-item">
 
           <summary>
@@ -965,6 +1020,7 @@
         </details>
 
 
+
         <details class="faq-item">
 
           <summary>
@@ -978,6 +1034,7 @@
           </div>
 
         </details>
+
 
 
         <details class="faq-item">
