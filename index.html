@@ -56,7 +56,7 @@
     content="https://atelie-bellas-artes.vercel.app/compartilhamento.png"
   >
 
-  <link rel="stylesheet" href="style.css?v=9">
+  <link rel="stylesheet" href="style.css?v=10">
 
 
   <style>
@@ -329,9 +329,7 @@
 
     @media (max-width: 650px) {
 
-      /*
-        CABEÇALHO COMPACTO
-      */
+      /* CABEÇALHO */
 
       .topo {
         display: flex;
@@ -357,9 +355,7 @@
       }
 
 
-      /*
-        BOTÃO MENU
-      */
+      /* MENU */
 
       .botao-menu-mobile {
         display: block;
@@ -393,9 +389,7 @@
       }
 
 
-      /*
-        BANNER MOBILE
-      */
+      /* BANNER */
 
       .banner-principal {
         width: 100%;
@@ -408,9 +402,72 @@
       }
 
 
-      /*
-        ENCOMENDAS
-      */
+      /* =========================
+         PRODUTOS NO CELULAR
+      ========================= */
+
+      .produtos-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .produto {
+        width: 100%;
+        border-radius: 16px;
+        overflow: hidden;
+      }
+
+      .produto-imagem {
+        width: 100%;
+        height: 220px;
+        overflow: hidden;
+      }
+
+      .produto-imagem img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .produto-info {
+        padding: 20px 16px;
+      }
+
+      .produto-info .categoria {
+        font-size: 11px;
+      }
+
+      .produto-info h3 {
+        font-size: 21px;
+        line-height: 1.2;
+        margin-top: 6px;
+        margin-bottom: 10px;
+      }
+
+      .produto-info p {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .produto-info strong {
+        display: block;
+        font-size: 20px;
+        margin: 14px 0;
+      }
+
+      .botao-whatsapp {
+        display: block;
+        width: 100%;
+        padding: 14px 16px;
+        text-align: center;
+        font-size: 14px;
+        box-sizing: border-box;
+      }
+
+
+      /* ENCOMENDAS */
 
       .etapas-encomenda {
         grid-template-columns: 1fr;
@@ -433,9 +490,7 @@
       }
 
 
-      /*
-        FAQ
-      */
+      /* FAQ */
 
       .faq-item summary {
         font-size: 17px;
@@ -502,19 +557,17 @@
   <main>
 
 
-    <!-- BANNER RESPONSIVO -->
+    <!-- BANNER -->
 
     <section id="inicio" class="banner-principal">
 
       <picture class="banner-responsivo">
 
-        <!-- CELULAR -->
         <source
           media="(max-width: 650px)"
           srcset="banner-bellas-artes-mobile.png"
         >
 
-        <!-- COMPUTADOR -->
         <img
           src="banner-bellas-artes.png"
           alt="Ateliê Bellas Artes - peças artesanais em crochê"
@@ -835,7 +888,6 @@
         <div class="formas-pagamento">
 
           <span>Pix</span>
-
           <span>Dinheiro</span>
 
         </div>
@@ -850,7 +902,7 @@
 
 
 
-      <!-- PRAZO -->
+      <!-- PRAZO E ENTREGA -->
 
       <div class="prazo-entrega">
 
@@ -932,9 +984,7 @@
 
 
 
-    <!-- =========================================
-         PERGUNTAS FREQUENTES
-    ========================================== -->
+    <!-- FAQ -->
 
     <section id="faq" class="secao">
 
