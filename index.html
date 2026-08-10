@@ -3,7 +3,11 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>Ateliê Bellas Artes | Crochê Artesanal</title>
 
@@ -12,10 +16,8 @@
     content="Peças artesanais em crochê feitas com carinho. Sousplats, trilhos de mesa, jogos de banheiro, tapetes e encomendas personalizadas."
   >
 
-  <!-- ÍCONE -->
   <link rel="icon" type="image/png" href="favicon.png">
 
-  <!-- COMPARTILHAMENTO -->
   <meta property="og:title" content="Ateliê Bellas Artes | Crochê Artesanal">
 
   <meta
@@ -34,9 +36,13 @@
   >
 
   <meta property="og:type" content="website">
+
   <meta property="og:site_name" content="Ateliê Bellas Artes">
 
-  <meta name="twitter:card" content="summary_large_image">
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
 
   <meta
     name="twitter:title"
@@ -53,12 +59,66 @@
     content="https://atelie-bellas-artes.vercel.app/compartilhamento.png"
   >
 
-  <!-- CSS PRINCIPAL -->
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=7">
 
 
-  <!-- ESTILOS QUE GARANTEM AS NOVAS SEÇÕES -->
   <style>
+
+    /* =========================
+       MENU MOBILE
+    ========================= */
+
+    .botao-menu-mobile {
+      display: none;
+      background: transparent;
+      border: 1px solid #d8c4b5;
+      color: #624c3e;
+      padding: 10px 16px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    @media (max-width: 650px) {
+
+      .topo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .botao-menu-mobile {
+        display: block;
+        margin-top: 14px;
+      }
+
+      .topo nav {
+        display: none;
+        width: 100%;
+        margin-top: 14px;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .topo nav.menu-aberto {
+        display: flex;
+      }
+
+      .topo nav a {
+        display: block;
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+        padding: 11px 14px;
+        border-radius: 10px;
+        background: #fffaf6;
+        border: 1px solid #eee3da;
+      }
+
+    }
+
 
     /* =========================
        ENCOMENDAS
@@ -215,7 +275,7 @@
 
 
     /* =========================
-       PERGUNTAS FREQUENTES
+       FAQ
     ========================= */
 
     .faq-lista {
@@ -272,7 +332,9 @@
     }
 
 
-    /* TABLET */
+    /* =========================
+       TABLET
+    ========================= */
 
     @media (max-width: 950px) {
 
@@ -287,7 +349,9 @@
     }
 
 
-    /* CELULAR */
+    /* =========================
+       CELULAR
+    ========================= */
 
     @media (max-width: 650px) {
 
@@ -343,7 +407,17 @@
     </div>
 
 
-    <nav>
+    <button
+      class="botao-menu-mobile"
+      id="botao-menu-mobile"
+      aria-expanded="false"
+      aria-controls="menu-principal"
+    >
+      ☰ Menu
+    </button>
+
+
+    <nav id="menu-principal">
 
       <a href="#inicio">Início</a>
 
@@ -408,8 +482,6 @@
       <div class="produtos-grid">
 
 
-        <!-- SOUSPLAT -->
-
         <article class="produto">
 
           <div class="produto-imagem">
@@ -420,7 +492,6 @@
             >
 
           </div>
-
 
           <div class="produto-info">
 
@@ -450,8 +521,6 @@
 
 
 
-        <!-- TRILHO -->
-
         <article class="produto">
 
           <div class="produto-imagem">
@@ -462,7 +531,6 @@
             >
 
           </div>
-
 
           <div class="produto-info">
 
@@ -493,8 +561,6 @@
 
 
 
-        <!-- JOGO DE BANHEIRO -->
-
         <article class="produto">
 
           <div class="produto-imagem">
@@ -505,7 +571,6 @@
             >
 
           </div>
-
 
           <div class="produto-info">
 
@@ -607,7 +672,6 @@
 
       <div class="etapas-encomenda">
 
-
         <article class="etapa-encomenda">
 
           <div class="numero-etapa">1</div>
@@ -620,7 +684,6 @@
           </p>
 
         </article>
-
 
 
         <article class="etapa-encomenda">
@@ -636,7 +699,6 @@
           </p>
 
         </article>
-
 
 
         <article class="etapa-encomenda">
@@ -658,7 +720,6 @@
         </article>
 
 
-
         <article class="etapa-encomenda">
 
           <div class="numero-etapa">4</div>
@@ -673,12 +734,9 @@
 
         </article>
 
-
       </div>
 
 
-
-      <!-- PAGAMENTO -->
 
       <div class="pagamento-encomenda">
 
@@ -702,10 +760,7 @@
 
 
 
-      <!-- PRAZO -->
-
       <div class="prazo-entrega">
-
 
         <article class="info-prazo">
 
@@ -729,7 +784,6 @@
         </article>
 
 
-
         <article class="info-prazo">
 
           <h3>Entrega ou retirada</h3>
@@ -747,12 +801,9 @@
 
         </article>
 
-
       </div>
 
 
-
-      <!-- DATA ESPECIAL -->
 
       <div class="data-especial">
 
@@ -784,10 +835,7 @@
 
 
 
-    <!-- ==========================================
-         PERGUNTAS FREQUENTES
-         ESTE BLOCO PRECISA APARECER NO VS CODE
-    =========================================== -->
+    <!-- FAQ -->
 
     <section id="faq" class="secao">
 
@@ -807,7 +855,6 @@
 
       <div class="faq-lista">
 
-
         <details class="faq-item">
 
           <summary>
@@ -824,7 +871,6 @@
         </details>
 
 
-
         <details class="faq-item">
 
           <summary>
@@ -838,7 +884,6 @@
           </div>
 
         </details>
-
 
 
         <details class="faq-item">
@@ -857,7 +902,6 @@
         </details>
 
 
-
         <details class="faq-item">
 
           <summary>
@@ -871,7 +915,6 @@
           </div>
 
         </details>
-
 
 
         <details class="faq-item">
@@ -889,7 +932,6 @@
         </details>
 
 
-
         <details class="faq-item">
 
           <summary>
@@ -904,7 +946,6 @@
           </div>
 
         </details>
-
 
       </div>
 
@@ -970,8 +1011,6 @@
 
 
 
-  <!-- RODAPÉ -->
-
   <footer>
 
     <p>© 2026 Ateliê Bellas Artes</p>
@@ -979,6 +1018,63 @@
     <p>Peças artesanais feitas com carinho.</p>
 
   </footer>
+
+
+
+  <!-- MENU MOBILE -->
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const botaoMenu = document.getElementById("botao-menu-mobile");
+      const menu = document.getElementById("menu-principal");
+
+      if (botaoMenu && menu) {
+
+        botaoMenu.addEventListener("click", function () {
+
+          menu.classList.toggle("menu-aberto");
+
+          const aberto = menu.classList.contains("menu-aberto");
+
+          botaoMenu.setAttribute("aria-expanded", aberto);
+
+          botaoMenu.textContent = aberto
+            ? "✕ Fechar"
+            : "☰ Menu";
+
+        });
+
+
+        const links = menu.querySelectorAll("a");
+
+        links.forEach(function (link) {
+
+          link.addEventListener("click", function () {
+
+            if (window.innerWidth <= 650) {
+
+              menu.classList.remove("menu-aberto");
+
+              botaoMenu.setAttribute(
+                "aria-expanded",
+                "false"
+              );
+
+              botaoMenu.textContent = "☰ Menu";
+
+            }
+
+          });
+
+        });
+
+      }
+
+    });
+
+  </script>
 
 
   <script src="script.js"></script>
