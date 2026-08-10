@@ -2,13 +2,8 @@
 <html lang="pt-BR">
 
 <head>
-
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Ateliê Bellas Artes | Crochê Artesanal</title>
 
@@ -17,16 +12,11 @@
     content="Peças artesanais em crochê feitas com carinho. Sousplats, trilhos de mesa, jogos de banheiro, tapetes e encomendas personalizadas."
   >
 
-  <link
-    rel="icon"
-    type="image/png"
-    href="favicon.png"
-  >
+  <!-- ÍCONE -->
+  <link rel="icon" type="image/png" href="favicon.png">
 
-  <meta
-    property="og:title"
-    content="Ateliê Bellas Artes | Crochê Artesanal"
-  >
+  <!-- COMPARTILHAMENTO -->
+  <meta property="og:title" content="Ateliê Bellas Artes | Crochê Artesanal">
 
   <meta
     property="og:description"
@@ -43,20 +33,10 @@
     content="https://atelie-bellas-artes.vercel.app/"
   >
 
-  <meta
-    property="og:type"
-    content="website"
-  >
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ateliê Bellas Artes">
 
-  <meta
-    property="og:site_name"
-    content="Ateliê Bellas Artes"
-  >
-
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  >
+  <meta name="twitter:card" content="summary_large_image">
 
   <meta
     name="twitter:title"
@@ -73,13 +53,16 @@
     content="https://atelie-bellas-artes.vercel.app/compartilhamento.png"
   >
 
-  <link
-    rel="stylesheet"
-    href="style.css?v=5"
-  >
+  <!-- CSS PRINCIPAL -->
+  <link rel="stylesheet" href="style.css?v=6">
 
 
+  <!-- ESTILOS QUE GARANTEM AS NOVAS SEÇÕES -->
   <style>
+
+    /* =========================
+       ENCOMENDAS
+    ========================= */
 
     .etapas-encomenda {
       display: grid;
@@ -125,6 +108,11 @@
       margin-top: 8px;
     }
 
+
+    /* =========================
+       PAGAMENTO
+    ========================= */
+
     .pagamento-encomenda {
       max-width: 760px;
       margin: 45px auto 0;
@@ -165,6 +153,11 @@
       color: #6e5a4c;
       line-height: 1.7;
     }
+
+
+    /* =========================
+       PRAZO E ENTREGA
+    ========================= */
 
     .prazo-entrega {
       max-width: 980px;
@@ -221,7 +214,9 @@
     }
 
 
-    /* FAQ */
+    /* =========================
+       PERGUNTAS FREQUENTES
+    ========================= */
 
     .faq-lista {
       max-width: 900px;
@@ -241,13 +236,12 @@
     .faq-item summary {
       list-style: none;
       cursor: pointer;
-      padding: 20px 24px;
+      padding: 20px 55px 20px 24px;
       font-family: Georgia, serif;
       font-size: 19px;
       font-weight: bold;
       color: #624c3e;
       position: relative;
-      padding-right: 55px;
     }
 
     .faq-item summary::-webkit-details-marker {
@@ -278,6 +272,8 @@
     }
 
 
+    /* TABLET */
+
     @media (max-width: 950px) {
 
       .etapas-encomenda {
@@ -289,6 +285,9 @@
       }
 
     }
+
+
+    /* CELULAR */
 
     @media (max-width: 650px) {
 
@@ -331,46 +330,32 @@
 <body>
 
 
+  <!-- CABEÇALHO -->
+
   <header class="topo">
 
     <div class="logo">
 
-      <h1>
-        Ateliê Bellas Artes
-      </h1>
+      <h1>Ateliê Bellas Artes</h1>
 
-      <p>
-        Peças artesanais feitas com carinho
-      </p>
+      <p>Peças artesanais feitas com carinho</p>
 
     </div>
 
 
     <nav>
 
-      <a href="#inicio">
-        Início
-      </a>
+      <a href="#inicio">Início</a>
 
-      <a href="catalogo.html">
-        Produtos
-      </a>
+      <a href="catalogo.html">Produtos</a>
 
-      <a href="#como-funciona">
-        Encomendas
-      </a>
+      <a href="#como-funciona">Encomendas</a>
 
-      <a href="#faq">
-        Dúvidas
-      </a>
+      <a href="#faq">Dúvidas</a>
 
-      <a href="#sobre">
-        Sobre
-      </a>
+      <a href="#sobre">Sobre</a>
 
-      <a href="#contato">
-        Contato
-      </a>
+      <a href="#contato">Contato</a>
 
     </nav>
 
@@ -381,10 +366,9 @@
   <main>
 
 
-    <section
-      id="inicio"
-      class="banner-principal"
-    >
+    <!-- BANNER -->
+
+    <section id="inicio" class="banner-principal">
 
       <img
         src="banner-bellas-artes.png"
@@ -403,24 +387,19 @@
 
 
 
-    <section
-      id="produtos"
-      class="secao"
-    >
+    <!-- PRODUTOS -->
+
+    <section id="produtos" class="secao">
 
       <div class="titulo-secao">
 
-        <span>
-          Nossas peças
-        </span>
+        <span>Nossas peças</span>
 
-        <h2>
-          Produtos em destaque
-        </h2>
+        <h2>Produtos em destaque</h2>
 
         <p>
-          Peças artesanais feitas com cuidado para
-          deixar sua casa ainda mais bonita e aconchegante.
+          Peças artesanais feitas com cuidado para deixar
+          sua casa ainda mais bonita e aconchegante.
         </p>
 
       </div>
@@ -428,6 +407,8 @@
 
       <div class="produtos-grid">
 
+
+        <!-- SOUSPLAT -->
 
         <article class="produto">
 
@@ -440,24 +421,19 @@
 
           </div>
 
+
           <div class="produto-info">
 
-            <span class="categoria">
-              Mesa posta
-            </span>
+            <span class="categoria">Mesa posta</span>
 
-            <h3>
-              Kit com 4 Sousplats
-            </h3>
+            <h3>Kit com 4 Sousplats</h3>
 
             <p>
               Conjunto artesanal delicado para deixar
               sua mesa posta ainda mais bonita e especial.
             </p>
 
-            <strong>
-              R$ 159,90
-            </strong>
+            <strong>R$ 159,90</strong>
 
             <a
               href="https://wa.me/5548991967784?text=Olá! Gostaria de encomendar o Kit com 4 Sousplats do Ateliê Bellas Artes."
@@ -474,6 +450,8 @@
 
 
 
+        <!-- TRILHO -->
+
         <article class="produto">
 
           <div class="produto-imagem">
@@ -485,15 +463,12 @@
 
           </div>
 
+
           <div class="produto-info">
 
-            <span class="categoria">
-              Decoração
-            </span>
+            <span class="categoria">Decoração</span>
 
-            <h3>
-              Trilho de Mesa
-            </h3>
+            <h3>Trilho de Mesa</h3>
 
             <p>
               Um toque artesanal elegante para transformar
@@ -501,9 +476,7 @@
               ainda mais acolhedor.
             </p>
 
-            <strong>
-              A partir de R$ 139,90
-            </strong>
+            <strong>A partir de R$ 139,90</strong>
 
             <a
               href="https://wa.me/5548991967784?text=Olá! Gostaria de encomendar um Trilho de Mesa do Ateliê Bellas Artes."
@@ -520,6 +493,8 @@
 
 
 
+        <!-- JOGO DE BANHEIRO -->
+
         <article class="produto">
 
           <div class="produto-imagem">
@@ -531,15 +506,12 @@
 
           </div>
 
+
           <div class="produto-info">
 
-            <span class="categoria">
-              Banheiro
-            </span>
+            <span class="categoria">Banheiro</span>
 
-            <h3>
-              Jogo de Banheiro
-            </h3>
+            <h3>Jogo de Banheiro</h3>
 
             <p>
               Conjunto artesanal com três peças para
@@ -547,9 +519,7 @@
               confortável e aconchegante.
             </p>
 
-            <strong>
-              R$ 199,90
-            </strong>
+            <strong>R$ 199,90</strong>
 
             <a
               href="https://wa.me/5548991967784?text=Olá! Gostaria de encomendar um Jogo de Banheiro do Ateliê Bellas Artes."
@@ -564,20 +534,13 @@
 
         </article>
 
+
       </div>
 
 
-      <div
-        style="
-          text-align: center;
-          margin-top: 45px;
-        "
-      >
+      <div style="text-align:center; margin-top:45px;">
 
-        <a
-          href="catalogo.html"
-          class="botao"
-        >
+        <a href="catalogo.html" class="botao">
           Ver catálogo completo
         </a>
 
@@ -587,17 +550,15 @@
 
 
 
+    <!-- PERSONALIZADO -->
+
     <section class="sobre">
 
       <div class="sobre-conteudo">
 
-        <span>
-          Feito especialmente para você
-        </span>
+        <span>Feito especialmente para você</span>
 
-        <h2>
-          Quer uma peça personalizada?
-        </h2>
+        <h2>Quer uma peça personalizada?</h2>
 
         <p>
           Criamos peças artesanais sob encomenda
@@ -626,20 +587,15 @@
 
 
 
-    <section
-      id="como-funciona"
-      class="secao"
-    >
+    <!-- COMO FUNCIONA -->
+
+    <section id="como-funciona" class="secao">
 
       <div class="titulo-secao">
 
-        <span>
-          Sua encomenda
-        </span>
+        <span>Sua encomenda</span>
 
-        <h2>
-          Como funciona sua encomenda
-        </h2>
+        <h2>Como funciona sua encomenda</h2>
 
         <p>
           Um processo simples e transparente para você
@@ -654,13 +610,9 @@
 
         <article class="etapa-encomenda">
 
-          <div class="numero-etapa">
-            1
-          </div>
+          <div class="numero-etapa">1</div>
 
-          <h3>
-            Escolha sua peça
-          </h3>
+          <h3>Escolha sua peça</h3>
 
           <p>
             Escolha uma peça do nosso catálogo
@@ -670,15 +622,12 @@
         </article>
 
 
+
         <article class="etapa-encomenda">
 
-          <div class="numero-etapa">
-            2
-          </div>
+          <div class="numero-etapa">2</div>
 
-          <h3>
-            Personalize do seu jeito
-          </h3>
+          <h3>Personalize do seu jeito</h3>
 
           <p>
             Pelo WhatsApp, combinamos modelo,
@@ -689,15 +638,12 @@
         </article>
 
 
+
         <article class="etapa-encomenda">
 
-          <div class="numero-etapa">
-            3
-          </div>
+          <div class="numero-etapa">3</div>
 
-          <h3>
-            Confirmação do pedido
-          </h3>
+          <h3>Confirmação do pedido</h3>
 
           <p>
             Para confirmar o pedido,
@@ -712,15 +658,12 @@
         </article>
 
 
+
         <article class="etapa-encomenda">
 
-          <div class="numero-etapa">
-            4
-          </div>
+          <div class="numero-etapa">4</div>
 
-          <h3>
-            Produção artesanal
-          </h3>
+          <h3>Produção artesanal</h3>
 
           <p>
             Após a confirmação, sua peça entra em produção
@@ -730,24 +673,22 @@
 
         </article>
 
+
       </div>
 
 
+
+      <!-- PAGAMENTO -->
+
       <div class="pagamento-encomenda">
 
-        <h3>
-          Formas de pagamento
-        </h3>
+        <h3>Formas de pagamento</h3>
 
         <div class="formas-pagamento">
 
-          <span>
-            Pix
-          </span>
+          <span>Pix</span>
 
-          <span>
-            Dinheiro
-          </span>
+          <span>Dinheiro</span>
 
         </div>
 
@@ -760,14 +701,15 @@
       </div>
 
 
+
+      <!-- PRAZO -->
+
       <div class="prazo-entrega">
 
 
         <article class="info-prazo">
 
-          <h3>
-            Prazo de produção
-          </h3>
+          <h3>Prazo de produção</h3>
 
           <p>
             Cada peça é produzida artesanalmente
@@ -787,11 +729,10 @@
         </article>
 
 
+
         <article class="info-prazo">
 
-          <h3>
-            Entrega ou retirada
-          </h3>
+          <h3>Entrega ou retirada</h3>
 
           <p>
             Quando sua encomenda estiver pronta,
@@ -810,11 +751,12 @@
       </div>
 
 
+
+      <!-- DATA ESPECIAL -->
+
       <div class="data-especial">
 
-        <strong>
-          Precisa para uma data especial?
-        </strong>
+        <strong>Precisa para uma data especial?</strong>
 
         <p>
           Encomendas com data específica devem ser
@@ -825,12 +767,7 @@
       </div>
 
 
-      <div
-        style="
-          text-align: center;
-          margin-top: 35px;
-        "
-      >
+      <div style="text-align:center; margin-top:35px;">
 
         <a
           href="https://wa.me/5548991967784?text=Olá! Vim pelo site do Ateliê Bellas Artes e gostaria de fazer uma encomenda."
@@ -847,22 +784,18 @@
 
 
 
-    <!-- PERGUNTAS FREQUENTES -->
+    <!-- ==========================================
+         PERGUNTAS FREQUENTES
+         ESTE BLOCO PRECISA APARECER NO VS CODE
+    =========================================== -->
 
-    <section
-      id="faq"
-      class="secao"
-    >
+    <section id="faq" class="secao">
 
       <div class="titulo-secao">
 
-        <span>
-          Tire suas dúvidas
-        </span>
+        <span>Tire suas dúvidas</span>
 
-        <h2>
-          Perguntas frequentes
-        </h2>
+        <h2>Perguntas frequentes</h2>
 
         <p>
           Reunimos aqui algumas das dúvidas mais comuns
@@ -884,11 +817,12 @@
           <div class="faq-resposta">
             Sim. Em encomendas personalizadas, você pode escolher
             as cores de acordo com seu gosto e com a decoração
-            do ambiente. A disponibilidade das cores é confirmada
+            do ambiente. A disponibilidade das cores será confirmada
             pelo WhatsApp antes do início da produção.
           </div>
 
         </details>
+
 
 
         <details class="faq-item">
@@ -898,12 +832,13 @@
           </summary>
 
           <div class="faq-resposta">
-            Sim. Podemos ajustar medidas de acordo com a peça
+            Sim. Podemos ajustar as medidas de acordo com a peça
             desejada. Basta informar as medidas pelo WhatsApp
             para avaliarmos o modelo e passarmos o valor da encomenda.
           </div>
 
         </details>
+
 
 
         <details class="faq-item">
@@ -922,6 +857,7 @@
         </details>
 
 
+
         <details class="faq-item">
 
           <summary>
@@ -937,6 +873,7 @@
         </details>
 
 
+
         <details class="faq-item">
 
           <summary>
@@ -944,12 +881,13 @@
           </summary>
 
           <div class="faq-resposta">
-            Quando a peça estiver pronta, entramos em contato
+            Quando a peça estiver pronta, entraremos em contato
             para combinar a melhor forma de entrega ou retirada.
-            Todos os detalhes são acertados diretamente pelo WhatsApp.
+            Todos os detalhes serão acertados diretamente pelo WhatsApp.
           </div>
 
         </details>
+
 
 
         <details class="faq-item">
@@ -974,20 +912,15 @@
 
 
 
-    <section
-      id="sobre"
-      class="sobre"
-    >
+    <!-- SOBRE -->
+
+    <section id="sobre" class="sobre">
 
       <div class="sobre-conteudo">
 
-        <span>
-          Sobre o Ateliê
-        </span>
+        <span>Sobre o Ateliê</span>
 
-        <h2>
-          Feito à mão, com carinho
-        </h2>
+        <h2>Feito à mão, com carinho</h2>
 
         <p>
           No Ateliê Bellas Artes, cada peça é produzida
@@ -1010,14 +943,11 @@
 
 
 
-    <section
-      id="contato"
-      class="contato"
-    >
+    <!-- CONTATO -->
 
-      <h2>
-        Gostou de alguma peça?
-      </h2>
+    <section id="contato" class="contato">
+
+      <h2>Gostou de alguma peça?</h2>
 
       <p>
         Fale diretamente conosco pelo WhatsApp
@@ -1040,15 +970,13 @@
 
 
 
+  <!-- RODAPÉ -->
+
   <footer>
 
-    <p>
-      © 2026 Ateliê Bellas Artes
-    </p>
+    <p>© 2026 Ateliê Bellas Artes</p>
 
-    <p>
-      Peças artesanais feitas com carinho.
-    </p>
+    <p>Peças artesanais feitas com carinho.</p>
 
   </footer>
 
