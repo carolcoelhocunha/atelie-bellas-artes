@@ -13,520 +13,37 @@
 
   <meta
     name="description"
-    content="Peças artesanais em crochê feitas com carinho. Sousplats, trilhos de mesa, jogos de banheiro, tapetes e encomendas personalizadas."
+    content="Crochê artesanal feito com carinho. Sousplats, trilhos, centros de mesa, jogos de banheiro, tapetes, jogos de cozinha, amigurumis e encomendas personalizadas."
   >
 
-  <link rel="icon" type="image/png" href="favicon.png">
-
-  <!-- COMPARTILHAMENTO -->
-  <meta property="og:title" content="Ateliê Bellas Artes | Crochê Artesanal">
-
-  <meta
-    property="og:description"
-    content="Peças artesanais feitas com carinho para deixar sua casa ainda mais bonita e aconchegante."
-  >
-
-  <meta
-    property="og:image"
-    content="https://atelie-bellas-artes.vercel.app/compartilhamento.png"
-  >
-
-  <meta
-    property="og:url"
-    content="https://atelie-bellas-artes.vercel.app/"
-  >
-
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Ateliê Bellas Artes">
-
-  <meta name="twitter:card" content="summary_large_image">
-
-  <meta
-    name="twitter:title"
-    content="Ateliê Bellas Artes | Crochê Artesanal"
-  >
-
-  <meta
-    name="twitter:description"
-    content="Peças artesanais feitas com carinho para deixar sua casa ainda mais bonita e aconchegante."
-  >
-
-  <meta
-    name="twitter:image"
-    content="https://atelie-bellas-artes.vercel.app/compartilhamento.png"
-  >
-
-  <link rel="stylesheet" href="style.css?v=10">
-
-
-  <style>
-
-    /* =========================
-       MENU MOBILE
-    ========================= */
-
-    .botao-menu-mobile {
-      display: none;
-      background: transparent;
-      border: 1px solid #d8c4b5;
-      color: #624c3e;
-      padding: 10px 16px;
-      border-radius: 30px;
-      font-size: 14px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-
-    /* =========================
-       BANNER RESPONSIVO
-    ========================= */
-
-    .banner-responsivo {
-      display: block;
-      width: 100%;
-    }
-
-    .banner-responsivo img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-
-    /* =========================
-       ENCOMENDAS
-    ========================= */
-
-    .etapas-encomenda {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
-      margin-top: 35px;
-    }
-
-    .etapa-encomenda {
-      background: #ffffff;
-      padding: 28px 22px;
-      border-radius: 18px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(84, 64, 52, 0.10);
-      border: 1px solid #eee3da;
-    }
-
-    .numero-etapa {
-      width: 50px;
-      height: 50px;
-      margin: 0 auto 18px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #8b6752;
-      color: #ffffff;
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    .etapa-encomenda h3 {
-      font-family: Georgia, serif;
-      color: #624c3e;
-      font-size: 21px;
-      margin-bottom: 12px;
-    }
-
-    .etapa-encomenda p {
-      color: #6e5a4c;
-      font-size: 15px;
-      line-height: 1.6;
-      margin-top: 8px;
-    }
-
-
-    /* =========================
-       PAGAMENTO
-    ========================= */
-
-    .pagamento-encomenda {
-      max-width: 760px;
-      margin: 45px auto 0;
-      padding: 30px;
-      text-align: center;
-      background: #f4ece4;
-      border-radius: 20px;
-      border: 1px solid #e4d5ca;
-    }
-
-    .pagamento-encomenda h3 {
-      font-family: Georgia, serif;
-      color: #624c3e;
-      font-size: 26px;
-      margin-bottom: 18px;
-    }
-
-    .formas-pagamento {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 20px;
-    }
-
-    .formas-pagamento span {
-      background: #ffffff;
-      color: #6c4d3c;
-      padding: 10px 24px;
-      border-radius: 30px;
-      font-weight: bold;
-      border: 1px solid #ddcabe;
-    }
-
-    .pagamento-encomenda p {
-      max-width: 580px;
-      margin: auto;
-      color: #6e5a4c;
-      line-height: 1.7;
-    }
-
-
-    /* =========================
-       PRAZO E ENTREGA
-    ========================= */
-
-    .prazo-entrega {
-      max-width: 980px;
-      margin: 35px auto 0;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
-    }
-
-    .info-prazo {
-      background: #ffffff;
-      border: 1px solid #eee3da;
-      border-radius: 18px;
-      padding: 28px 24px;
-      box-shadow: 0 10px 30px rgba(84, 64, 52, 0.07);
-      text-align: center;
-    }
-
-    .info-prazo h3 {
-      font-family: Georgia, serif;
-      color: #624c3e;
-      font-size: 23px;
-      margin-bottom: 14px;
-    }
-
-    .info-prazo p {
-      color: #6e5a4c;
-      font-size: 15px;
-      line-height: 1.7;
-      margin-top: 8px;
-    }
-
-    .data-especial {
-      max-width: 760px;
-      margin: 25px auto 0;
-      padding: 22px 25px;
-      background: #fff8f3;
-      border: 1px solid #ead9cc;
-      border-radius: 18px;
-      text-align: center;
-    }
-
-    .data-especial strong {
-      display: block;
-      font-family: Georgia, serif;
-      color: #624c3e;
-      font-size: 20px;
-      margin-bottom: 8px;
-    }
-
-    .data-especial p {
-      color: #6e5a4c;
-      line-height: 1.6;
-    }
-
-
-    /* =========================
-       FAQ
-    ========================= */
-
-    .faq-lista {
-      max-width: 900px;
-      margin: 35px auto 0;
-      display: grid;
-      gap: 14px;
-    }
-
-    .faq-item {
-      background: #ffffff;
-      border: 1px solid #eadfd7;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 8px 24px rgba(84, 64, 52, 0.06);
-    }
-
-    .faq-item summary {
-      list-style: none;
-      cursor: pointer;
-      padding: 20px 55px 20px 24px;
-      font-family: Georgia, serif;
-      font-size: 19px;
-      font-weight: bold;
-      color: #624c3e;
-      position: relative;
-    }
-
-    .faq-item summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .faq-item summary::after {
-      content: "+";
-      position: absolute;
-      right: 22px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-family: Arial, sans-serif;
-      font-size: 26px;
-      color: #8b6752;
-      font-weight: normal;
-    }
-
-    .faq-item[open] summary::after {
-      content: "−";
-    }
-
-    .faq-resposta {
-      padding: 0 24px 22px;
-      color: #6e5a4c;
-      font-size: 15px;
-      line-height: 1.7;
-    }
-
-
-    /* =========================
-       TABLET
-    ========================= */
-
-    @media (max-width: 950px) {
-
-      .etapas-encomenda {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .prazo-entrega {
-        grid-template-columns: 1fr;
-      }
-
-    }
-
-
-    /* =========================
-       CELULAR
-    ========================= */
-
-    @media (max-width: 650px) {
-
-      /* CABEÇALHO */
-
-      .topo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 14px;
-        padding-bottom: 14px;
-      }
-
-      .logo {
-        text-align: center;
-      }
-
-      .logo h1 {
-        font-size: 24px;
-        line-height: 1.05;
-        margin-bottom: 4px;
-      }
-
-      .logo p {
-        font-size: 12px;
-        margin-top: 2px;
-      }
-
-
-      /* MENU */
-
-      .botao-menu-mobile {
-        display: block;
-        margin-top: 10px;
-        padding: 9px 15px;
-        font-size: 13px;
-      }
-
-      .topo nav {
-        display: none;
-        width: 100%;
-        margin-top: 12px;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .topo nav.menu-aberto {
-        display: flex;
-      }
-
-      .topo nav a {
-        display: block;
-        width: 100%;
-        max-width: 280px;
-        text-align: center;
-        padding: 11px 14px;
-        border-radius: 10px;
-        background: #fffaf6;
-        border: 1px solid #eee3da;
-      }
-
-
-      /* BANNER */
-
-      .banner-principal {
-        width: 100%;
-        overflow: hidden;
-      }
-
-      .banner-responsivo,
-      .banner-responsivo img {
-        width: 100%;
-      }
-
-
-      /* =========================
-         PRODUTOS NO CELULAR
-      ========================= */
-
-      .produtos-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
-
-      .produto {
-        width: 100%;
-        border-radius: 16px;
-        overflow: hidden;
-      }
-
-      .produto-imagem {
-        width: 100%;
-        height: 220px;
-        overflow: hidden;
-      }
-
-      .produto-imagem img {
-        width: 100%;
-        height: 100%;
-        display: block;
-        object-fit: cover;
-        object-position: center;
-      }
-
-      .produto-info {
-        padding: 20px 16px;
-      }
-
-      .produto-info .categoria {
-        font-size: 11px;
-      }
-
-      .produto-info h3 {
-        font-size: 21px;
-        line-height: 1.2;
-        margin-top: 6px;
-        margin-bottom: 10px;
-      }
-
-      .produto-info p {
-        font-size: 14px;
-        line-height: 1.5;
-      }
-
-      .produto-info strong {
-        display: block;
-        font-size: 20px;
-        margin: 14px 0;
-      }
-
-      .botao-whatsapp {
-        display: block;
-        width: 100%;
-        padding: 14px 16px;
-        text-align: center;
-        font-size: 14px;
-        box-sizing: border-box;
-      }
-
-
-      /* ENCOMENDAS */
-
-      .etapas-encomenda {
-        grid-template-columns: 1fr;
-      }
-
-      .etapa-encomenda {
-        padding: 25px 20px;
-      }
-
-      .pagamento-encomenda {
-        padding: 25px 18px;
-      }
-
-      .info-prazo {
-        padding: 25px 18px;
-      }
-
-      .data-especial {
-        padding: 20px 18px;
-      }
-
-
-      /* FAQ */
-
-      .faq-item summary {
-        font-size: 17px;
-        padding: 18px 50px 18px 18px;
-      }
-
-      .faq-resposta {
-        padding: 0 18px 20px;
-      }
-
-    }
-
-  </style>
-
+  <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
 
-  <!-- CABEÇALHO -->
+<!-- =========================
+     CABEÇALHO
+========================= -->
 
-  <header class="topo">
+<header class="topo">
 
-    <div class="logo">
+  <div class="container topo-conteudo">
+
+    <a href="#inicio" class="marca">
 
       <h1>Ateliê Bellas Artes</h1>
 
-      <p>Peças artesanais feitas com carinho</p>
+      <p>
+        Peças artesanais feitas com carinho
+      </p>
 
-    </div>
+    </a>
 
 
     <button
-      class="botao-menu-mobile"
-      id="botao-menu-mobile"
+      class="botao-menu"
+      id="botao-menu"
       aria-expanded="false"
       aria-controls="menu-principal"
     >
@@ -534,716 +51,2532 @@
     </button>
 
 
-    <nav id="menu-principal">
+    <nav
+      id="menu-principal"
+      class="menu"
+    >
 
-      <a href="#inicio">Início</a>
+      <a href="#inicio">
+        Início
+      </a>
 
-      <a href="catalogo.html">Produtos</a>
+      <a href="#categorias">
+        Catálogo
+      </a>
 
-      <a href="#como-funciona">Encomendas</a>
+      <a href="#personalizacao">
+        Personalização
+      </a>
 
-      <a href="#faq">Dúvidas</a>
+      <a href="#encomendas">
+        Encomendas
+      </a>
 
-      <a href="#sobre">Sobre</a>
+      <a href="#contato">
+        Contato
+      </a>
 
-      <a href="#contato">Contato</a>
+      <a
+        href="https://www.instagram.com/ateliebellasartes.sc/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="menu-instagram"
+      >
+        Instagram
+      </a>
 
     </nav>
 
-  </header>
+  </div>
 
+</header>
 
 
-  <main>
 
+<main>
 
-    <!-- BANNER -->
 
-    <section id="inicio" class="banner-principal">
+<!-- =========================
+     BANNER
+========================= -->
 
-      <picture class="banner-responsivo">
+<section
+  id="inicio"
+  class="hero"
+>
 
-        <source
-          media="(max-width: 650px)"
-          srcset="banner-bellas-artes-mobile.png"
-        >
+  <img
+    src="imagens/banner.png"
+    alt="Crochê artesanal do Ateliê Bellas Artes"
+    class="hero-fundo"
+  >
 
-        <img
-          src="banner-bellas-artes.png"
-          alt="Ateliê Bellas Artes - peças artesanais em crochê"
-        >
+  <div class="hero-overlay"></div>
 
-      </picture>
 
+  <div class="container hero-conteudo">
 
-      <a
-        href="https://wa.me/5548991967784?text=Olá! Vim pelo site do Ateliê Bellas Artes e gostaria de fazer uma encomenda."
-        target="_blank"
-        rel="noopener noreferrer"
-        class="botao-banner-encomenda"
-        aria-label="Fazer encomenda pelo WhatsApp"
-      ></a>
+    <div class="hero-texto">
 
-    </section>
+      <span class="mini-titulo">
+        CROCHÊ ARTESANAL
+      </span>
 
+      <h2>
+        Feito à mão para deixar
+        seu lar ainda mais especial
+      </h2>
 
+      <p>
+        Peças artesanais criadas com carinho,
+        cuidado e atenção aos detalhes.
+        Escolha seu modelo, suas cores e crie
+        algo que combine com você.
+      </p>
 
-    <!-- PRODUTOS -->
 
-    <section id="produtos" class="secao">
-
-      <div class="titulo-secao">
-
-        <span>Nossas peças</span>
-
-        <h2>Produtos em destaque</h2>
-
-        <p>
-          Peças artesanais feitas com cuidado para deixar
-          sua casa ainda mais bonita e aconchegante.
-        </p>
-
-      </div>
-
-
-      <div class="produtos-grid">
-
-
-        <!-- SOUSPLAT -->
-
-        <article class="produto">
-
-          <div class="produto-imagem">
-
-            <img
-              src="sousplats.png"
-              alt="Sousplats artesanais em crochê do Ateliê Bellas Artes"
-            >
-
-          </div>
-
-
-          <div class="produto-info">
-
-            <span class="categoria">Mesa posta</span>
-
-            <h3>Kit com 4 Sousplats</h3>
-
-            <p>
-              Conjunto artesanal delicado para deixar
-              sua mesa posta ainda mais bonita e especial.
-            </p>
-
-            <strong>R$ 159,90</strong>
-
-            <a
-              href="https://wa.me/5548991967784?text=Olá! Gostaria de encomendar o Kit com 4 Sousplats do Ateliê Bellas Artes."
-              target="_blank"
-              rel="noopener noreferrer"
-              class="botao-whatsapp"
-            >
-              Pedir pelo WhatsApp
-            </a>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- TRILHO -->
-
-        <article class="produto">
-
-          <div class="produto-imagem">
-
-            <img
-              src="trilho-mesa.png"
-              alt="Trilho de mesa artesanal em crochê do Ateliê Bellas Artes"
-            >
-
-          </div>
-
-
-          <div class="produto-info">
-
-            <span class="categoria">Decoração</span>
-
-            <h3>Trilho de Mesa</h3>
-
-            <p>
-              Um toque artesanal elegante para transformar
-              a decoração da sua mesa e deixar o ambiente
-              ainda mais acolhedor.
-            </p>
-
-            <strong>A partir de R$ 139,90</strong>
-
-            <a
-              href="https://wa.me/5548991967784?text=Olá! Gostaria de encomendar um Trilho de Mesa do Ateliê Bellas Artes."
-              target="_blank"
-              rel="noopener noreferrer"
-              class="botao-whatsapp"
-            >
-              Pedir pelo WhatsApp
-            </a>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- JOGO DE BANHEIRO -->
-
-        <article class="produto">
-
-          <div class="produto-imagem">
-
-            <img
-              src="jogo-banheiro.png"
-              alt="Jogo de banheiro artesanal em crochê do Ateliê Bellas Artes"
-            >
-
-          </div>
-
-
-          <div class="produto-info">
-
-            <span class="categoria">Banheiro</span>
-
-            <h3>Jogo de Banheiro</h3>
-
-            <p>
-              Conjunto artesanal com três peças para
-              deixar seu banheiro mais bonito,
-              confortável e aconchegante.
-            </p>
-
-            <strong>R$ 199,90</strong>
-
-            <a
-              href="https://wa.me/5548991967784?text=Olá! Gostaria de encomendar um Jogo de Banheiro do Ateliê Bellas Artes."
-              target="_blank"
-              rel="noopener noreferrer"
-              class="botao-whatsapp"
-            >
-              Pedir pelo WhatsApp
-            </a>
-
-          </div>
-
-        </article>
-
-
-      </div>
-
-
-      <div style="text-align:center; margin-top:45px;">
-
-        <a href="catalogo.html" class="botao">
-          Ver catálogo completo
-        </a>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- PERSONALIZADO -->
-
-    <section class="sobre">
-
-      <div class="sobre-conteudo">
-
-        <span>Feito especialmente para você</span>
-
-        <h2>Quer uma peça personalizada?</h2>
-
-        <p>
-          Criamos peças artesanais sob encomenda
-          para combinar com o seu estilo e com a sua casa.
-        </p>
-
-        <p>
-          Você pode conversar conosco sobre o modelo,
-          as cores e as medidas que deseja.
-        </p>
-
-        <br>
+      <div class="hero-botoes">
 
         <a
-          href="https://wa.me/5548991967784?text=Olá! Vim pelo site do Ateliê Bellas Artes e gostaria de encomendar uma peça personalizada. Quero conversar sobre o modelo, as cores e as medidas."
-          target="_blank"
-          rel="noopener noreferrer"
-          class="botao"
+          href="#categorias"
+          class="botao botao-principal"
         >
-          Pedir peça personalizada
+          Conhecer nossas peças
         </a>
 
-      </div>
-
-    </section>
-
-
-
-    <!-- COMO FUNCIONA -->
-
-    <section id="como-funciona" class="secao">
-
-      <div class="titulo-secao">
-
-        <span>Sua encomenda</span>
-
-        <h2>Como funciona sua encomenda</h2>
-
-        <p>
-          Um processo simples e transparente para você
-          acompanhar cada etapa da sua peça artesanal.
-        </p>
-
-      </div>
-
-
-      <div class="etapas-encomenda">
-
-
-        <article class="etapa-encomenda">
-
-          <div class="numero-etapa">1</div>
-
-          <h3>Escolha sua peça</h3>
-
-          <p>
-            Escolha uma peça do nosso catálogo
-            ou solicite um modelo personalizado.
-          </p>
-
-        </article>
-
-
-
-        <article class="etapa-encomenda">
-
-          <div class="numero-etapa">2</div>
-
-          <h3>Personalize do seu jeito</h3>
-
-          <p>
-            Pelo WhatsApp, combinamos modelo,
-            cores, tamanho e todos os detalhes
-            da sua encomenda.
-          </p>
-
-        </article>
-
-
-
-        <article class="etapa-encomenda">
-
-          <div class="numero-etapa">3</div>
-
-          <h3>Confirmação do pedido</h3>
-
-          <p>
-            Para confirmar o pedido,
-            solicitamos 50% do valor antecipadamente.
-          </p>
-
-          <p>
-            Os 50% restantes são pagos quando a peça
-            estiver pronta, antes da entrega ou retirada.
-          </p>
-
-        </article>
-
-
-
-        <article class="etapa-encomenda">
-
-          <div class="numero-etapa">4</div>
-
-          <h3>Produção artesanal</h3>
-
-          <p>
-            Após a confirmação, sua peça entra em produção
-            e é feita à mão especialmente para você,
-            com cuidado e atenção aos detalhes.
-          </p>
-
-        </article>
-
-
-      </div>
-
-
-
-      <!-- PAGAMENTO -->
-
-      <div class="pagamento-encomenda">
-
-        <h3>Formas de pagamento</h3>
-
-        <div class="formas-pagamento">
-
-          <span>Pix</span>
-          <span>Dinheiro</span>
-
-        </div>
-
-        <p>
-          O pagamento antecipado de 50% garante
-          a confirmação da encomenda e o início
-          da produção da peça.
-        </p>
-
-      </div>
-
-
-
-      <!-- PRAZO E ENTREGA -->
-
-      <div class="prazo-entrega">
-
-
-        <article class="info-prazo">
-
-          <h3>Prazo de produção</h3>
-
-          <p>
-            Cada peça é produzida artesanalmente
-            após a confirmação do pedido.
-          </p>
-
-          <p>
-            O prazo pode variar de acordo com o
-            modelo, tamanho e quantidade da encomenda.
-          </p>
-
-          <p>
-            O prazo exato será informado pelo WhatsApp
-            antes da confirmação do pedido.
-          </p>
-
-        </article>
-
-
-
-        <article class="info-prazo">
-
-          <h3>Entrega ou retirada</h3>
-
-          <p>
-            Quando sua encomenda estiver pronta,
-            entraremos em contato para combinar
-            a entrega ou retirada.
-          </p>
-
-          <p>
-            Os 50% restantes deverão estar pagos
-            antes da entrega ou retirada da peça.
-          </p>
-
-        </article>
-
-
-      </div>
-
-
-
-      <!-- DATA ESPECIAL -->
-
-      <div class="data-especial">
-
-        <strong>Precisa para uma data especial?</strong>
-
-        <p>
-          Encomendas com data específica devem ser
-          consultadas antecipadamente para verificarmos
-          a disponibilidade de produção.
-        </p>
-
-      </div>
-
-
-      <div style="text-align:center; margin-top:35px;">
 
         <a
           href="https://wa.me/5548991967784?text=Olá! Vim pelo site do Ateliê Bellas Artes e gostaria de fazer uma encomenda."
           target="_blank"
           rel="noopener noreferrer"
-          class="botao"
+          class="botao botao-secundario hero-botao-claro"
         >
-          Fazer minha encomenda
+          Fazer encomenda
         </a>
 
       </div>
 
-    </section>
+    </div>
 
+  </div>
 
+</section>
 
-    <!-- FAQ -->
 
-    <section id="faq" class="secao">
 
-      <div class="titulo-secao">
+<!-- =========================
+     CATEGORIAS
+========================= -->
 
-        <span>Tire suas dúvidas</span>
+<section
+  id="categorias"
+  class="secao categorias"
+>
 
-        <h2>Perguntas frequentes</h2>
+  <div class="container">
 
-        <p>
-          Reunimos aqui algumas das dúvidas mais comuns
-          sobre nossas peças e encomendas.
-        </p>
+    <div class="titulo-secao">
 
-      </div>
+      <span>
+        ENCONTRE SUA PEÇA
+      </span>
 
-
-      <div class="faq-lista">
-
-
-        <details class="faq-item">
-
-          <summary>
-            Posso escolher as cores da minha peça?
-          </summary>
-
-          <div class="faq-resposta">
-            Sim. Em encomendas personalizadas, você pode escolher
-            as cores de acordo com seu gosto e com a decoração
-            do ambiente. A disponibilidade das cores será confirmada
-            pelo WhatsApp antes do início da produção.
-          </div>
-
-        </details>
-
-
-
-        <details class="faq-item">
-
-          <summary>
-            Vocês fazem peças sob medida?
-          </summary>
-
-          <div class="faq-resposta">
-            Sim. Podemos ajustar as medidas de acordo com a peça
-            desejada. Basta informar as medidas pelo WhatsApp
-            para avaliarmos o modelo e passarmos o valor da encomenda.
-          </div>
-
-        </details>
-
-
-
-        <details class="faq-item">
-
-          <summary>
-            Como funciona o pagamento?
-          </summary>
-
-          <div class="faq-resposta">
-            Para confirmar a encomenda, solicitamos 50% do valor
-            antecipadamente. Os 50% restantes são pagos quando
-            a peça estiver pronta, antes da entrega ou retirada.
-            Atualmente aceitamos Pix e dinheiro.
-          </div>
-
-        </details>
-
-
-
-        <details class="faq-item">
-
-          <summary>
-            Qual é o prazo de produção?
-          </summary>
-
-          <div class="faq-resposta">
-            O prazo varia conforme o modelo, tamanho e quantidade
-            de peças da encomenda. Antes de confirmar o pedido,
-            informamos pelo WhatsApp o prazo previsto de produção.
-          </div>
-
-        </details>
-
-
-
-        <details class="faq-item">
-
-          <summary>
-            Como funciona a entrega ou retirada?
-          </summary>
-
-          <div class="faq-resposta">
-            Quando a peça estiver pronta, entraremos em contato
-            para combinar a melhor forma de entrega ou retirada.
-            Todos os detalhes serão acertados diretamente pelo WhatsApp.
-          </div>
-
-        </details>
-
-
-
-        <details class="faq-item">
-
-          <summary>
-            Posso encomendar para uma data especial?
-          </summary>
-
-          <div class="faq-resposta">
-            Sim. Se precisar da peça para aniversário, presente,
-            casamento ou outra data específica, entre em contato
-            antecipadamente para verificarmos nossa disponibilidade
-            de produção.
-          </div>
-
-        </details>
-
-
-      </div>
-
-    </section>
-
-
-
-    <!-- SOBRE -->
-
-    <section id="sobre" class="sobre">
-
-      <div class="sobre-conteudo">
-
-        <span>Sobre o Ateliê</span>
-
-        <h2>Feito à mão, com carinho</h2>
-
-        <p>
-          No Ateliê Bellas Artes, cada peça é produzida
-          artesanalmente com atenção aos detalhes e muito carinho.
-        </p>
-
-        <p>
-          Transformamos fios em peças que trazem beleza,
-          aconchego e personalidade para cada cantinho da sua casa.
-        </p>
-
-        <p>
-          Trabalhamos com peças para mesa posta,
-          decoração e banheiro, além de encomendas personalizadas.
-        </p>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- CONTATO -->
-
-    <section id="contato" class="contato">
-
-      <h2>Gostou de alguma peça?</h2>
+      <h2>
+        Nossas categorias
+      </h2>
 
       <p>
-        Fale diretamente conosco pelo WhatsApp
-        para tirar dúvidas ou fazer sua encomenda.
+        Modelos para diferentes cantinhos,
+        momentos e estilos.
       </p>
+
+    </div>
+
+
+    <div class="grade-categorias">
+
+
+      <a
+        href="#sousplats"
+        class="categoria-card"
+      >
+
+        <div class="icone-categoria">
+          🍽️
+        </div>
+
+        <div>
+
+          <h3>
+            Sousplats
+          </h3>
+
+          <p>
+            Mesa posta com charme,
+            personalidade e delicadeza.
+          </p>
+
+          <span>
+            6 modelos →
+          </span>
+
+        </div>
+
+      </a>
+
+
+
+      <a
+        href="#trilhos"
+        class="categoria-card"
+      >
+
+        <div class="icone-categoria">
+          🌷
+        </div>
+
+        <div>
+
+          <h3>
+            Trilhos & Centros
+          </h3>
+
+          <p>
+            Peças elegantes para valorizar
+            sua mesa e sua decoração.
+          </p>
+
+          <span>
+            4 modelos →
+          </span>
+
+        </div>
+
+      </a>
+
+
+
+      <a
+        href="#banheiro"
+        class="categoria-card"
+      >
+
+        <div class="icone-categoria">
+          🛁
+        </div>
+
+        <div>
+
+          <h3>
+            Jogos de Banheiro
+          </h3>
+
+          <p>
+            Kits com três peças em
+            diferentes estilos.
+          </p>
+
+          <span>
+            4 modelos →
+          </span>
+
+        </div>
+
+      </a>
+
+
+
+      <a
+        href="#tapetes"
+        class="categoria-card"
+      >
+
+        <div class="icone-categoria">
+          🏡
+        </div>
+
+        <div>
+
+          <h3>
+            Tapetes
+          </h3>
+
+          <p>
+            Formatos e tamanhos para
+            diferentes ambientes.
+          </p>
+
+          <span>
+            4 modelos →
+          </span>
+
+        </div>
+
+      </a>
+
+
+
+      <a
+        href="#cozinha"
+        class="categoria-card"
+      >
+
+        <div class="icone-categoria">
+          ☕
+        </div>
+
+        <div>
+
+          <h3>
+            Jogos de Cozinha
+          </h3>
+
+          <p>
+            Kits com três peças para
+            transformar sua cozinha.
+          </p>
+
+          <span>
+            3 modelos →
+          </span>
+
+        </div>
+
+      </a>
+
+
+
+      <a
+        href="#amigurumis"
+        class="categoria-card"
+      >
+
+        <div class="icone-categoria">
+          🧸
+        </div>
+
+        <div>
+
+          <h3>
+            Amigurumis
+          </h3>
+
+          <p>
+            Peças especiais para presentear,
+            decorar e guardar momentos especiais.
+          </p>
+
+          <span>
+            6 modelos →
+          </span>
+
+        </div>
+
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     SOUSPLATS
+========================= -->
+
+<section
+  id="sousplats"
+  class="secao secao-produtos"
+>
+
+  <div class="container">
+
+    <div class="titulo-secao">
+
+      <span>
+        MESA POSTA
+      </span>
+
+      <h2>
+        Coleção de Sousplats
+      </h2>
+
+      <p>
+        Escolha o modelo que mais combina com você.
+        As cores podem ser personalizadas conforme
+        disponibilidade.
+      </p>
+
+    </div>
+
+
+    <div class="grade-produtos">
+
+
+      <!-- ELEGANCE -->
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            src="imagens/elegance.jpg"
+            alt="Sousplat Modelo Elegance"
+          >
+
+        </div>
+
+        <div class="produto-info">
+
+          <span class="categoria-produto">
+            SOUSPLAT
+          </span>
+
+          <h3>
+            Modelo Elegance
+          </h3>
+
+          <p>
+            Modelo clássico com borda trabalhada
+            e acabamento delicado.
+          </p>
+
+          <div class="cores">
+            <span class="cor cru"></span>
+            <span class="cor bege"></span>
+            <span class="cor branco"></span>
+            <span class="cor cinza"></span>
+          </div>
+
+          <div class="precos">
+            <span>Unidade</span>
+            <strong>R$ 39,90</strong>
+          </div>
+
+          <div class="precos">
+            <span>Kit com 4</span>
+            <strong>R$ 159,90</strong>
+          </div>
+
+          <div class="precos">
+            <span>Kit com 6</span>
+            <strong>R$ 229,90</strong>
+          </div>
+
+          <a
+            href="https://wa.me/5548991967784?text=Olá! Gostei do Sousplat Modelo Elegance do Ateliê Bellas Artes e gostaria de fazer uma encomenda."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="botao botao-produto"
+          >
+            Quero este modelo
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- IMPERIAL -->
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            src="imagens/imperial.jpg"
+            alt="Sousplat Modelo Imperial"
+          >
+
+        </div>
+
+        <div class="produto-info">
+
+          <span class="categoria-produto">
+            SOUSPLAT
+          </span>
+
+          <h3>
+            Modelo Imperial
+          </h3>
+
+          <p>
+            Modelo sofisticado com acabamento
+            contrastante e presença marcante.
+          </p>
+
+          <div class="cores">
+            <span class="cor verde-escuro"></span>
+            <span class="cor dourado"></span>
+            <span class="cor preto"></span>
+            <span class="cor cru"></span>
+          </div>
+
+          <div class="precos">
+            <span>Unidade</span>
+            <strong>R$ 39,90</strong>
+          </div>
+
+          <div class="precos">
+            <span>Kit com 4</span>
+            <strong>R$ 159,90</strong>
+          </div>
+
+          <div class="precos">
+            <span>Kit com 6</span>
+            <strong>R$ 229,90</strong>
+          </div>
+
+          <a
+            href="https://wa.me/5548991967784?text=Olá! Gostei do Sousplat Modelo Imperial do Ateliê Bellas Artes e gostaria de fazer uma encomenda."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="botao botao-produto"
+          >
+            Quero este modelo
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- FOLHAS -->
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            src="imagens/folhas.jpg"
+            alt="Sousplat Modelo Folhas"
+          >
+
+        </div>
+
+        <div class="produto-info">
+
+          <span class="categoria-produto">
+            SOUSPLAT
+          </span>
+
+          <h3>
+            Modelo Folhas
+          </h3>
+
+          <p>
+            Borda inspirada em folhas,
+            criando um visual delicado e elegante.
+          </p>
+
+          <div class="cores">
+            <span class="cor azul"></span>
+            <span class="cor verde"></span>
+            <span class="cor rose"></span>
+            <span class="cor cru"></span>
+          </div>
+
+          <div class="precos">
+            <span>Unidade</span>
+            <strong>R$ 39,90</strong>
+          </div>
+
+          <div class="precos">
+            <span>Kit com 4</span>
+            <strong>R$ 159,90</strong>
+          </div>
+
+          <div class="precos">
+            <span>Kit com 6</span>
+            <strong>R$ 229,90</strong>
+          </div>
+
+          <a
+            href="https://wa.me/5548991967784?text=Olá! Gostei do Sousplat Modelo Folhas do Ateliê Bellas Artes e gostaria de fazer uma encomenda."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="botao botao-produto"
+          >
+            Quero este modelo
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- RENDADO -->
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            src="imagens/rendado.jpg"
+            alt="Sousplat Modelo Rendado"
+          >
+
+        </div>
+
+        <div class="produto-info">
+
+          <span class="categoria-produto">
+            SOUSPLAT
+          </span>
+
+          <h3>
+            Modelo Rendado
+          </h3>
+
+          <p>
+            Bordas abertas e trabalhadas
+            para uma mesa cheia de charme.
+          </p>
+
+          <div class="cores">
+            <span class="cor vermelho"></span>
+            <span class="cor rose"></span>
+            <span class="cor branco"></span>
+            <span class="cor bege"></span>
+          </div>
+
+          <div class="precos">
+            <span>Unidade</span>
+            <strong>R$ 39,90</strong>
+          </div>
+
+          <div class="precos">
+            <span>Kit com 4</span>
+            <strong>R$ 159,90</strong>
+          </div>
+
+          <div class="precos">
+            <span>Kit com 6</span>
+            <strong>R$ 229,90</strong>
+          </div>
+
+          <a
+            href="https://wa.me/5548991967784?text=Olá! Gostei do Sousplat Modelo Rendado do Ateliê Bellas Artes e gostaria de fazer uma encomenda."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="botao botao-produto"
+          >
+            Quero este modelo
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- JARDIM -->
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            src="imagens/jardim.jpg"
+            alt="Sousplat Modelo Jardim"
+          >
+
+        </div>
+
+        <div class="produto-info">
+
+          <span class="categoria-produto">
+            SOUSPLAT
+          </span>
+
+          <h3>
+            Modelo Jardim
+          </h3>
+
+          <p>
+            Modelo trabalhado em camadas
+            com acabamento elegante.
+          </p>
+
+          <div class="cores">
+            <span class="cor branco"></span>
+            <span class="cor verde-escuro"></span>
+            <span class="cor dourado"></span>
+            <span class="cor cru"></span>
+          </div>
+
+          <div class="precos">
+            <span>Unidade</span>
+            <strong>R$ 39,90</strong>
+          </div>
+
+          <div class="precos">
+            <span>Kit com 4</span>
+            <strong>R$ 159,90</strong>
+          </div>
+
+          <div class="precos">
+            <span>Kit com 6</span>
+            <strong>R$ 229,90</strong>
+          </div>
+
+          <a
+            href="https://wa.me/5548991967784?text=Olá! Gostei do Sousplat Modelo Jardim do Ateliê Bellas Artes e gostaria de fazer uma encomenda."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="botao botao-produto"
+          >
+            Quero este modelo
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- ENCANTO -->
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            src="imagens/encanto.jpg"
+            alt="Sousplat Modelo Encanto"
+          >
+
+        </div>
+
+        <div class="produto-info">
+
+          <span class="categoria-produto">
+            SOUSPLAT
+          </span>
+
+          <h3>
+            Modelo Encanto
+          </h3>
+
+          <p>
+            Acabamento floral elegante
+            para composições delicadas.
+          </p>
+
+          <div class="cores">
+            <span class="cor verde"></span>
+            <span class="cor dourado"></span>
+            <span class="cor bege"></span>
+            <span class="cor branco"></span>
+          </div>
+
+          <div class="precos">
+            <span>Unidade</span>
+            <strong>R$ 39,90</strong>
+          </div>
+
+          <div class="precos">
+            <span>Kit com 4</span>
+            <strong>R$ 159,90</strong>
+          </div>
+
+          <div class="precos">
+            <span>Kit com 6</span>
+            <strong>R$ 229,90</strong>
+          </div>
+
+          <a
+            href="https://wa.me/5548991967784?text=Olá! Gostei do Sousplat Modelo Encanto do Ateliê Bellas Artes e gostaria de fazer uma encomenda."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="botao botao-produto"
+          >
+            Quero este modelo
+          </a>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     TRILHOS
+========================= -->
+
+<section
+  id="trilhos"
+  class="secao secao-produtos secao-alternada"
+>
+
+  <div class="container">
+
+    <div class="titulo-secao">
+
+      <span>DECORAÇÃO</span>
+
+      <h2>
+        Trilhos & Centros de Mesa
+      </h2>
+
+      <p>
+        Peças artesanais para valorizar
+        sua mesa e sua decoração.
+      </p>
+
+    </div>
+
+
+    <div class="grade-produtos">
+
+
+      <!-- MANDALA REAL -->
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            src="imagens/mandala-real.jpg"
+            alt="Centro de Mesa Mandala Real"
+          >
+
+        </div>
+
+        <div class="produto-info">
+
+          <span class="categoria-produto">
+            CENTRO DE MESA
+          </span>
+
+          <h3>
+            Mandala Real
+          </h3>
+
+          <p>
+            Centro de mesa redondo
+            com acabamento elaborado.
+          </p>
+
+          <div class="precos">
+            <span>Valor</span>
+            <strong>Consulte</strong>
+          </div>
+
+          <a
+            href="https://wa.me/5548991967784?text=Olá! Gostei do Centro de Mesa Mandala Real do Ateliê Bellas Artes."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="botao botao-produto"
+          >
+            Quero este modelo
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- CORAÇÕES -->
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            src="imagens/coracoes.jpg"
+            alt="Trilho Modelo Corações"
+          >
+
+        </div>
+
+        <div class="produto-info">
+
+          <span class="categoria-produto">
+            TRILHO DE MESA
+          </span>
+
+          <h3>
+            Modelo Corações
+          </h3>
+
+          <p>
+            Trilho delicado formado
+            por motivos de coração.
+          </p>
+
+          <div class="precos">
+            <span>1,20 m</span>
+            <strong>R$ 139,90</strong>
+          </div>
+
+          <div class="precos">
+            <span>1,80 m</span>
+            <strong>R$ 199,90</strong>
+          </div>
+
+          <a
+            href="https://wa.me/5548991967784?text=Olá! Gostei do Trilho Modelo Corações do Ateliê Bellas Artes."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="botao botao-produto"
+          >
+            Quero este modelo
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- JARDIM IMPERIAL -->
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            src="imagens/jardim-imperial.jpg"
+            alt="Trilho Jardim Imperial"
+          >
+
+        </div>
+
+        <div class="produto-info">
+
+          <span class="categoria-produto">
+            TRILHO DE MESA
+          </span>
+
+          <h3>
+            Jardim Imperial
+          </h3>
+
+          <p>
+            Modelo elegante e detalhado
+            para composições sofisticadas.
+          </p>
+
+          <div class="precos">
+            <span>1,20 m</span>
+            <strong>R$ 139,90</strong>
+          </div>
+
+          <div class="precos">
+            <span>1,80 m</span>
+            <strong>R$ 199,90</strong>
+          </div>
+
+          <a
+            href="https://wa.me/5548991967784?text=Olá! Gostei do Trilho Jardim Imperial do Ateliê Bellas Artes."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="botao botao-produto"
+          >
+            Quero este modelo
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- CLÁSSICO -->
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            src="imagens/classico.jpg"
+            alt="Trilho Modelo Clássico"
+          >
+
+        </div>
+
+        <div class="produto-info">
+
+          <span class="categoria-produto">
+            TRILHO DE MESA
+          </span>
+
+          <h3>
+            Modelo Clássico
+          </h3>
+
+          <p>
+            Trilho delicado com acabamento
+            elegante e atemporal.
+          </p>
+
+          <div class="precos">
+            <span>1,20 m</span>
+            <strong>R$ 139,90</strong>
+          </div>
+
+          <div class="precos">
+            <span>1,80 m</span>
+            <strong>R$ 199,90</strong>
+          </div>
+
+          <a
+            href="https://wa.me/5548991967784?text=Olá! Gostei do Trilho Modelo Clássico do Ateliê Bellas Artes."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="botao botao-produto"
+          >
+            Quero este modelo
+          </a>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     JOGOS DE BANHEIRO
+========================= -->
+
+<section
+  id="banheiro"
+  class="secao secao-produtos"
+>
+
+  <div class="container">
+
+    <div class="titulo-secao">
+
+      <span>
+        CONFORTO & DECORAÇÃO
+      </span>
+
+      <h2>
+        Jogos de Banheiro
+      </h2>
+
+      <p>
+        Kits artesanais com três peças
+        para deixar seu banheiro mais bonito
+        e aconchegante.
+      </p>
+
+    </div>
+
+
+    <div class="grade-produtos">
+
+
+      <!-- ELEGANCE -->
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            src="imagens/banheiro-elegance.jpg"
+            alt="Jogo de Banheiro Elegance"
+          >
+
+        </div>
+
+        <div class="produto-info">
+
+          <span class="categoria-produto">
+            JOGO DE BANHEIRO
+          </span>
+
+          <h3>
+            Modelo Elegance
+          </h3>
+
+          <p>
+            Modelo clássico,
+            elegante e sofisticado.
+          </p>
+
+          <div class="precos">
+            <span>Kit com 3 peças</span>
+            <strong>R$ 199,90</strong>
+          </div>
+
+          <a
+            href="https://wa.me/5548991967784?text=Olá! Gostei do Jogo de Banheiro Modelo Elegance do Ateliê Bellas Artes."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="botao botao-produto"
+          >
+            Quero este modelo
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- JARDIM DE ROSAS -->
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            src="imagens/banheiro-jardim-rosas.jpg"
+            alt="Jogo de Banheiro Jardim de Rosas"
+          >
+
+        </div>
+
+        <div class="produto-info">
+
+          <span class="categoria-produto">
+            JOGO DE BANHEIRO
+          </span>
+
+          <h3>
+            Jardim de Rosas
+          </h3>
+
+          <p>
+            Modelo romântico com
+            flores em destaque.
+          </p>
+
+          <div class="precos">
+            <span>Kit com 3 peças</span>
+            <strong>R$ 199,90</strong>
+          </div>
+
+          <a
+            href="https://wa.me/5548991967784?text=Olá! Gostei do Jogo de Banheiro Jardim de Rosas do Ateliê Bellas Artes."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="botao botao-produto"
+          >
+            Quero este modelo
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- JARDIM LILÁS -->
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            src="imagens/banheiro-jardim-lilas.jpg"
+            alt="Jogo de Banheiro Jardim Lilás"
+          >
+
+        </div>
+
+        <div class="produto-info">
+
+          <span class="categoria-produto">
+            JOGO DE BANHEIRO
+          </span>
+
+          <h3>
+            Jardim Lilás
+          </h3>
+
+          <p>
+            Modelo delicado com
+            detalhes florais.
+          </p>
+
+          <div class="precos">
+            <span>Kit com 3 peças</span>
+            <strong>R$ 199,90</strong>
+          </div>
+
+          <a
+            href="https://wa.me/5548991967784?text=Olá! Gostei do Jogo de Banheiro Jardim Lilás do Ateliê Bellas Artes."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="botao botao-produto"
+          >
+            Quero este modelo
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- ACONCHEGO -->
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            src="imagens/banheiro-aconchego.jpg"
+            alt="Jogo de Banheiro Aconchego"
+          >
+
+        </div>
+
+        <div class="produto-info">
+
+          <span class="categoria-produto">
+            JOGO DE BANHEIRO
+          </span>
+
+          <h3>
+            Modelo Aconchego
+          </h3>
+
+          <p>
+            Modelo neutro e acolhedor
+            para uma decoração clássica.
+          </p>
+
+          <div class="precos">
+            <span>Kit com 3 peças</span>
+            <strong>R$ 199,90</strong>
+          </div>
+
+          <a
+            href="https://wa.me/5548991967784?text=Olá! Gostei do Jogo de Banheiro Modelo Aconchego do Ateliê Bellas Artes."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="botao botao-produto"
+          >
+            Quero este modelo
+          </a>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     TAPETES
+========================= -->
+
+<section
+  id="tapetes"
+  class="secao secao-produtos secao-alternada"
+>
+
+  <div class="container">
+
+    <div class="titulo-secao">
+
+      <span>
+        CONFORTO PARA O SEU LAR
+      </span>
+
+      <h2>
+        Coleção de Tapetes
+      </h2>
+
+      <p>
+        Diferentes formatos e estilos
+        para deixar cada ambiente
+        mais aconchegante.
+      </p>
+
+    </div>
+
+
+    <div class="grade-produtos">
+
+
+      <!-- MANDALA ACONCHEGO -->
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            src="imagens/tapete-mandala-aconchego.jpg"
+            alt="Tapete Mandala Aconchego"
+          >
+
+        </div>
+
+        <div class="produto-info">
+
+          <span class="categoria-produto">
+            TAPETE
+          </span>
+
+          <h3>
+            Mandala Aconchego
+          </h3>
+
+          <p>
+            Modelo redondo para
+            salas e quartos.
+          </p>
+
+          <div class="precos">
+            <span>Pequeno</span>
+            <strong>R$ 89,90</strong>
+          </div>
+
+          <div class="precos">
+            <span>Médio</span>
+            <strong>R$ 149,90</strong>
+          </div>
+
+          <div class="precos">
+            <span>Grande</span>
+            <strong>R$ 249,90</strong>
+          </div>
+
+          <a
+            href="https://wa.me/5548991967784?text=Olá! Gostei do Tapete Mandala Aconchego do Ateliê Bellas Artes."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="botao botao-produto"
+          >
+            Quero este modelo
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- PASSADEIRA -->
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            src="imagens/tapete-passadeira-classica.jpg"
+            alt="Passadeira Clássica"
+          >
+
+        </div>
+
+        <div class="produto-info">
+
+          <span class="categoria-produto">
+            PASSADEIRA
+          </span>
+
+          <h3>
+            Passadeira Clássica
+          </h3>
+
+          <p>
+            Modelo comprido para
+            cozinhas e corredores.
+          </p>
+
+          <div class="precos">
+            <span>Valor</span>
+            <strong>Consulte</strong>
+          </div>
+
+          <a
+            href="https://wa.me/5548991967784?text=Olá! Gostei da Passadeira Clássica do Ateliê Bellas Artes."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="botao botao-produto"
+          >
+            Quero este modelo
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- RENDADO -->
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            src="imagens/tapete-rendado.jpg"
+            alt="Tapete Modelo Rendado"
+          >
+
+        </div>
+
+        <div class="produto-info">
+
+          <span class="categoria-produto">
+            TAPETE
+          </span>
+
+          <h3>
+            Modelo Rendado
+          </h3>
+
+          <p>
+            Modelo oval com
+            acabamento trabalhado.
+          </p>
+
+          <div class="precos">
+            <span>Pequeno</span>
+            <strong>R$ 89,90</strong>
+          </div>
+
+          <div class="precos">
+            <span>Médio</span>
+            <strong>R$ 149,90</strong>
+          </div>
+
+          <div class="precos">
+            <span>Grande</span>
+            <strong>R$ 249,90</strong>
+          </div>
+
+          <a
+            href="https://wa.me/5548991967784?text=Olá! Gostei do Tapete Modelo Rendado do Ateliê Bellas Artes."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="botao botao-produto"
+          >
+            Quero este modelo
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- JARDIM ROSÉ -->
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            src="imagens/tapete-jardim-rose.jpg"
+            alt="Tapete Jardim Rosé"
+          >
+
+        </div>
+
+        <div class="produto-info">
+
+          <span class="categoria-produto">
+            TAPETE
+          </span>
+
+          <h3>
+            Jardim Rosé
+          </h3>
+
+          <p>
+            Modelo floral,
+            delicado e romântico.
+          </p>
+
+          <div class="precos">
+            <span>Pequeno</span>
+            <strong>R$ 89,90</strong>
+          </div>
+
+          <div class="precos">
+            <span>Médio</span>
+            <strong>R$ 149,90</strong>
+          </div>
+
+          <div class="precos">
+            <span>Grande</span>
+            <strong>R$ 249,90</strong>
+          </div>
+
+          <a
+            href="https://wa.me/5548991967784?text=Olá! Gostei do Tapete Jardim Rosé do Ateliê Bellas Artes."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="botao botao-produto"
+          >
+            Quero este modelo
+          </a>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     JOGOS DE COZINHA
+========================= -->
+
+<section
+  id="cozinha"
+  class="secao secao-produtos"
+>
+
+  <div class="container">
+
+    <div class="titulo-secao">
+
+      <span>
+        CHARME PARA A COZINHA
+      </span>
+
+      <h2>
+        Jogos de Cozinha
+      </h2>
+
+      <p>
+        Kits com três peças feitos artesanalmente
+        para deixar sua cozinha ainda mais bonita
+        e aconchegante.
+      </p>
+
+    </div>
+
+
+    <div class="grade-produtos">
+
+
+      <!-- IMPERIAL -->
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            src="imagens/cozinha-imperial.jpg"
+            alt="Jogo de Cozinha Imperial"
+          >
+
+        </div>
+
+        <div class="produto-info">
+
+          <span class="categoria-produto">
+            JOGO DE COZINHA
+          </span>
+
+          <h3>
+            Modelo Imperial
+          </h3>
+
+          <p>
+            Kit elaborado com
+            acabamento sofisticado.
+          </p>
+
+          <div class="precos">
+            <span>Kit com 3 peças</span>
+            <strong>Consulte o valor</strong>
+          </div>
+
+          <a
+            href="https://wa.me/5548991967784?text=Olá! Gostei do Jogo de Cozinha Modelo Imperial do Ateliê Bellas Artes."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="botao botao-produto"
+          >
+            Quero este modelo
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- CORAÇÃO -->
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            src="imagens/cozinha-coracao.jpg"
+            alt="Jogo de Cozinha Coração"
+          >
+
+        </div>
+
+        <div class="produto-info">
+
+          <span class="categoria-produto">
+            JOGO DE COZINHA
+          </span>
+
+          <h3>
+            Modelo Coração
+          </h3>
+
+          <p>
+            Kit com detalhes em corações
+            e visual acolhedor.
+          </p>
+
+          <div class="precos">
+            <span>Kit com 3 peças</span>
+            <strong>Consulte o valor</strong>
+          </div>
+
+          <a
+            href="https://wa.me/5548991967784?text=Olá! Gostei do Jogo de Cozinha Modelo Coração do Ateliê Bellas Artes."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="botao botao-produto"
+          >
+            Quero este modelo
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- MODERNO -->
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            src="imagens/cozinha-moderno.jpg"
+            alt="Jogo de Cozinha Moderno"
+          >
+
+        </div>
+
+        <div class="produto-info">
+
+          <span class="categoria-produto">
+            JOGO DE COZINHA
+          </span>
+
+          <h3>
+            Modelo Moderno
+          </h3>
+
+          <p>
+            Kit com visual clean
+            e contemporâneo.
+          </p>
+
+          <div class="precos">
+            <span>Kit com 3 peças</span>
+            <strong>Consulte o valor</strong>
+          </div>
+
+          <a
+            href="https://wa.me/5548991967784?text=Olá! Gostei do Jogo de Cozinha Modelo Moderno do Ateliê Bellas Artes."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="botao botao-produto"
+          >
+            Quero este modelo
+          </a>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+
+    <div class="observacao-produtos">
+
+      <strong>
+        Escolha sua combinação
+      </strong>
+
+      <p>
+        Os jogos podem ser produzidos em outras
+        combinações de cores conforme disponibilidade.
+        O valor varia de acordo com o modelo,
+        medidas e quantidade de material utilizada.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     AMIGURUMIS
+========================= -->
+
+<section
+  id="amigurumis"
+  class="secao secao-produtos secao-alternada"
+>
+
+  <div class="container">
+
+    <div class="titulo-secao">
+
+      <span>
+        FEITOS PARA ENCANTAR
+      </span>
+
+      <h2>
+        Amigurumis Artesanais
+      </h2>
+
+      <p>
+        Pequenos companheiros feitos à mão,
+        ponto a ponto, para presentear,
+        decorar ou guardar momentos especiais.
+      </p>
+
+    </div>
+
+
+    <div class="grade-produtos">
+
+
+      <!-- GIRAFINHA -->
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            src="imagens/amigurumi-girafinha.jpg"
+            alt="Amigurumi Girafinha Carinho"
+          >
+
+        </div>
+
+        <div class="produto-info">
+
+          <span class="categoria-produto">
+            AMIGURUMI
+          </span>
+
+          <h3>
+            Girafinha Carinho
+          </h3>
+
+          <p>
+            Girafinha delicada e charmosa,
+            perfeita para presentes
+            e decoração infantil.
+          </p>
+
+          <div class="precos">
+            <span>Valor</span>
+            <strong>Consulte</strong>
+          </div>
+
+          <a
+            href="https://wa.me/5548991967784?text=Olá! Gostei do Amigurumi Girafinha Carinho do Ateliê Bellas Artes e gostaria de fazer uma encomenda."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="botao botao-produto"
+          >
+            Quero este amigurumi
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- GUAXINIM -->
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            src="imagens/amigurumi-guaxinim.jpg"
+            alt="Amigurumi Guaxinim Fofo"
+          >
+
+        </div>
+
+        <div class="produto-info">
+
+          <span class="categoria-produto">
+            AMIGURUMI
+          </span>
+
+          <h3>
+            Guaxinim Fofo
+          </h3>
+
+          <p>
+            Um amigurumi cheio de personalidade,
+            com detalhes marcantes no rostinho.
+          </p>
+
+          <div class="precos">
+            <span>Valor</span>
+            <strong>Consulte</strong>
+          </div>
+
+          <a
+            href="https://wa.me/5548991967784?text=Olá! Gostei do Amigurumi Guaxinim Fofo do Ateliê Bellas Artes e gostaria de fazer uma encomenda."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="botao botao-produto"
+          >
+            Quero este amigurumi
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- OVELHINHA -->
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            src="imagens/amigurumi-ovelhinha.jpg"
+            alt="Amigurumi Ovelhinha Nuvem"
+          >
+
+        </div>
+
+        <div class="produto-info">
+
+          <span class="categoria-produto">
+            AMIGURUMI
+          </span>
+
+          <h3>
+            Ovelhinha Nuvem
+          </h3>
+
+          <p>
+            Macia, delicada e aconchegante,
+            com visual inspirado
+            em uma pequena nuvem.
+          </p>
+
+          <div class="precos">
+            <span>Valor</span>
+            <strong>Consulte</strong>
+          </div>
+
+          <a
+            href="https://wa.me/5548991967784?text=Olá! Gostei do Amigurumi Ovelhinha Nuvem do Ateliê Bellas Artes e gostaria de fazer uma encomenda."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="botao botao-produto"
+          >
+            Quero este amigurumi
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- COELHINHA BAILARINA -->
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            src="imagens/amigurumi-coelhinha-bailarina.jpg"
+            alt="Amigurumi Coelhinha Bailarina"
+          >
+
+        </div>
+
+        <div class="produto-info">
+
+          <span class="categoria-produto">
+            AMIGURUMI
+          </span>
+
+          <h3>
+            Coelhinha Bailarina
+          </h3>
+
+          <p>
+            Uma coelhinha delicada e elegante,
+            com roupa e detalhes personalizáveis.
+          </p>
+
+          <div class="precos">
+            <span>Valor</span>
+            <strong>Consulte</strong>
+          </div>
+
+          <a
+            href="https://wa.me/5548991967784?text=Olá! Gostei da Amigurumi Coelhinha Bailarina do Ateliê Bellas Artes e gostaria de fazer uma encomenda."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="botao botao-produto"
+          >
+            Quero este amigurumi
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- COELHINHO -->
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            src="imagens/amigurumi-coelhinho.jpg"
+            alt="Amigurumi Coelhinho Aconchego"
+          >
+
+        </div>
+
+        <div class="produto-info">
+
+          <span class="categoria-produto">
+            AMIGURUMI
+          </span>
+
+          <h3>
+            Coelhinho Aconchego
+          </h3>
+
+          <p>
+            Coelhinho macio com orelhas grandes,
+            perfeito para um presente
+            cheio de carinho.
+          </p>
+
+          <div class="precos">
+            <span>Valor</span>
+            <strong>Consulte</strong>
+          </div>
+
+          <a
+            href="https://wa.me/5548991967784?text=Olá! Gostei do Amigurumi Coelhinho Aconchego do Ateliê Bellas Artes e gostaria de fazer uma encomenda."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="botao botao-produto"
+          >
+            Quero este amigurumi
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- URSINHO -->
+
+      <article class="produto-card">
+
+        <div class="produto-imagem">
+
+          <img
+            src="imagens/amigurumi-ursinho.jpg"
+            alt="Amigurumi Ursinho Clássico"
+          >
+
+        </div>
+
+        <div class="produto-info">
+
+          <span class="categoria-produto">
+            AMIGURUMI
+          </span>
+
+          <h3>
+            Ursinho Clássico
+          </h3>
+
+          <p>
+            O tradicional ursinho artesanal,
+            feito com carinho e possibilidade
+            de personalização.
+          </p>
+
+          <div class="precos">
+            <span>Valor</span>
+            <strong>Consulte</strong>
+          </div>
+
+          <a
+            href="https://wa.me/5548991967784?text=Olá! Gostei do Amigurumi Ursinho Clássico do Ateliê Bellas Artes e gostaria de fazer uma encomenda."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="botao botao-produto"
+          >
+            Quero este amigurumi
+          </a>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+
+    <div class="observacao-produtos">
+
+      <strong>
+        Quer outro personagem?
+      </strong>
+
+      <p>
+        Também fazemos outros modelos de amigurumis
+        sob encomenda. Envie uma foto ou conte sua ideia
+        pelo WhatsApp para verificarmos a possibilidade
+        de produção, tamanho, cores e valor.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     PERSONALIZAÇÃO
+========================= -->
+
+<section
+  id="personalizacao"
+  class="personalizacao"
+>
+
+  <div class="container personalizacao-conteudo">
+
+    <div>
+
+      <span class="mini-titulo">
+        DO SEU JEITO
+      </span>
+
+      <h2>
+        Personalize sua encomenda
+      </h2>
+
+      <p>
+        Escolha cores, medidas e detalhes para
+        deixar sua peça ainda mais especial.
+      </p>
+
+    </div>
+
+
+    <div class="personalizacao-opcoes">
+
+      <div>
+
+        <strong>
+          🎨 Cores
+        </strong>
+
+        <span>
+          Escolha sua combinação favorita
+        </span>
+
+      </div>
+
+
+      <div>
+
+        <strong>
+          📏 Tamanho
+        </strong>
+
+        <span>
+          Consulte medidas personalizadas
+        </span>
+
+      </div>
+
+
+      <div>
+
+        <strong>
+          🧶 Modelo
+        </strong>
+
+        <span>
+          Escolha entre nossos modelos
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     ENCOMENDAS
+========================= -->
+
+<section
+  id="encomendas"
+  class="secao encomendas"
+>
+
+  <div class="container">
+
+    <div class="titulo-secao">
+
+      <span>
+        COMO FUNCIONA
+      </span>
+
+      <h2>
+        Sua encomenda
+      </h2>
+
+      <p>
+        Um processo simples do primeiro contato
+        até sua peça ficar pronta.
+      </p>
+
+    </div>
+
+
+    <div class="passos">
+
+
+      <article class="passo">
+
+        <div class="numero">
+          1
+        </div>
+
+        <h3>
+          Escolha
+        </h3>
+
+        <p>
+          Escolha seu modelo favorito.
+        </p>
+
+      </article>
+
+
+      <article class="passo">
+
+        <div class="numero">
+          2
+        </div>
+
+        <h3>
+          Personalize
+        </h3>
+
+        <p>
+          Combinamos cores,
+          tamanho e detalhes.
+        </p>
+
+      </article>
+
+
+      <article class="passo">
+
+        <div class="numero">
+          3
+        </div>
+
+        <h3>
+          Confirme
+        </h3>
+
+        <p>
+          50% do valor confirma
+          sua encomenda.
+        </p>
+
+      </article>
+
+
+      <article class="passo">
+
+        <div class="numero">
+          4
+        </div>
+
+        <h3>
+          Produção
+        </h3>
+
+        <p>
+          Sua peça é feita
+          artesanalmente.
+        </p>
+
+      </article>
+
+
+    </div>
+
+
+    <div class="pagamento">
+
+      <h3>
+        Formas de pagamento
+      </h3>
+
+      <div class="formas-pagamento">
+
+        <span>
+          Pix
+        </span>
+
+        <span>
+          Dinheiro
+        </span>
+
+      </div>
+
+      <p>
+        50% antecipado para confirmar a encomenda
+        e 50% quando a peça estiver pronta,
+        antes da entrega ou retirada.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTATO
+========================= -->
+
+<section
+  id="contato"
+  class="contato"
+>
+
+  <div class="container contato-conteudo">
+
+    <span>
+      FALE CONOSCO
+    </span>
+
+    <h2>
+      Encontrou sua peça?
+    </h2>
+
+    <p>
+      Fale conosco pelo WhatsApp para
+      consultar cores, prazo,
+      valores e disponibilidade.
+    </p>
+
+
+    <a
+      href="https://wa.me/5548991967784?text=Olá! Vim pelo site do Ateliê Bellas Artes e gostaria de fazer uma encomenda."
+      target="_blank"
+      rel="noopener noreferrer"
+      class="botao botao-claro"
+    >
+      Falar pelo WhatsApp
+    </a>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     RODAPÉ
+========================= -->
+
+<footer class="rodape">
+
+  <div class="container rodape-grade">
+
+
+    <div class="rodape-marca">
+
+      <h3>
+        Ateliê Bellas Artes
+      </h3>
+
+      <p>
+        Peças artesanais feitas à mão
+        com carinho para deixar momentos
+        e ambientes ainda mais especiais.
+      </p>
+
+    </div>
+
+
+
+    <div class="rodape-coluna">
+
+      <h4>
+        Catálogo
+      </h4>
+
+      <a href="#sousplats">
+        Sousplats
+      </a>
+
+      <a href="#trilhos">
+        Trilhos & Centros
+      </a>
+
+      <a href="#banheiro">
+        Jogos de Banheiro
+      </a>
+
+      <a href="#tapetes">
+        Tapetes
+      </a>
+
+      <a href="#cozinha">
+        Jogos de Cozinha
+      </a>
+
+      <a href="#amigurumis">
+        Amigurumis
+      </a>
+
+    </div>
+
+
+
+    <div class="rodape-coluna">
+
+      <h4>
+        Atendimento
+      </h4>
 
       <a
         href="https://wa.me/5548991967784?text=Olá! Vim pelo site do Ateliê Bellas Artes e gostaria de fazer uma encomenda."
         target="_blank"
         rel="noopener noreferrer"
-        class="botao"
       >
-        Falar pelo WhatsApp
+        WhatsApp
       </a>
 
-    </section>
+      <a
+        href="https://www.instagram.com/ateliebellasartes.sc/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        @ateliebellasartes.sc
+      </a>
 
+      <a href="#encomendas">
+        Como encomendar
+      </a>
 
-  </main>
-
-
-
-  <!-- RODAPÉ -->
-
-  <footer>
-
-    <p>© 2026 Ateliê Bellas Artes</p>
-
-    <p>Peças artesanais feitas com carinho.</p>
-
-  </footer>
+    </div>
 
 
 
-  <!-- MENU MOBILE -->
+    <div class="rodape-coluna">
 
-  <script>
+      <h4>
+        Encomendas
+      </h4>
 
-    document.addEventListener("DOMContentLoaded", function () {
+      <p>
+        Pix e dinheiro
+      </p>
 
-      const botaoMenu =
-        document.getElementById("botao-menu-mobile");
+      <p>
+        50% para confirmar
+      </p>
 
-      const menu =
-        document.getElementById("menu-principal");
+      <p>
+        Produção artesanal
+      </p>
+
+    </div>
 
 
-      if (botaoMenu && menu) {
+  </div>
 
-        botaoMenu.addEventListener("click", function () {
 
-          menu.classList.toggle("menu-aberto");
+  <div class="rodape-final">
 
-          const aberto =
-            menu.classList.contains("menu-aberto");
+    <div class="container">
+
+      <p>
+        © 2026 Ateliê Bellas Artes • Feito à mão com carinho 🧶
+      </p>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+<!-- =========================
+     WHATSAPP FLUTUANTE
+========================= -->
+
+<a
+  href="https://wa.me/5548991967784?text=Olá! Vim pelo site do Ateliê Bellas Artes e gostaria de fazer uma encomenda."
+  target="_blank"
+  rel="noopener noreferrer"
+  class="whatsapp-flutuante"
+  aria-label="Falar pelo WhatsApp"
+>
+
+  <span>
+    💬
+  </span>
+
+  <strong>
+    WhatsApp
+  </strong>
+
+</a>
+
+
+
+<!-- =========================
+     MENU MOBILE
+========================= -->
+
+<script>
+
+  const botaoMenu =
+    document.getElementById("botao-menu");
+
+  const menu =
+    document.getElementById("menu-principal");
+
+
+  botaoMenu.addEventListener(
+    "click",
+    function () {
+
+      menu.classList.toggle(
+        "menu-aberto"
+      );
+
+      const aberto =
+        menu.classList.contains(
+          "menu-aberto"
+        );
+
+      botaoMenu.setAttribute(
+        "aria-expanded",
+        aberto
+      );
+
+      botaoMenu.textContent =
+        aberto
+          ? "✕ Fechar"
+          : "☰ Menu";
+
+    }
+  );
+
+
+  menu
+    .querySelectorAll("a")
+    .forEach(function (link) {
+
+      link.addEventListener(
+        "click",
+        function () {
+
+          menu.classList.remove(
+            "menu-aberto"
+          );
 
           botaoMenu.setAttribute(
             "aria-expanded",
-            aberto
+            "false"
           );
 
           botaoMenu.textContent =
-            aberto ? "✕ Fechar" : "☰ Menu";
+            "☰ Menu";
 
-        });
-
-
-        const links = menu.querySelectorAll("a");
-
-
-        links.forEach(function (link) {
-
-          link.addEventListener("click", function () {
-
-            if (window.innerWidth <= 650) {
-
-              menu.classList.remove("menu-aberto");
-
-              botaoMenu.setAttribute(
-                "aria-expanded",
-                "false"
-              );
-
-              botaoMenu.textContent = "☰ Menu";
-
-            }
-
-          });
-
-        });
-
-      }
+        }
+      );
 
     });
 
-  </script>
-
-
-  <script src="script.js"></script>
+</script>
 
 
 </body>
